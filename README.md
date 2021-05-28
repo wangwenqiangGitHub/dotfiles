@@ -1,5 +1,5 @@
 # 版本管理dotfiles
-- 将本机所有的vim插件及配置文件统一进行管理，安装所有的文件在！~/.vim下，每次修改只要同步既可
+- 将本机所有的vim插件及配置文件统一进行管理，安装所有的文件在~/.vim下，每次修改只要同步既可
 ## 目录结构
 ```sh
 ~/.vim/
@@ -24,15 +24,14 @@ git push
 ## 使用配置
 - 安装:
 ```sh
-	git clone https://github.com/wangwenqiangGitHub/dotfiles.git ~/.vim
+git clone https://github.com/wangwenqiangGitHub/dotfiles.git ~/.vim
 ```
 - link:
 ```sh
-	ln -s /.vim/vimrc ~/.vimrc
+ln -s /.vim/vimrc ~/.vimrc
 ```
 - 进入~/.vim目录取回submoduldes:
 ```sh
 git submodule init
 git submodule update
 ```
-
