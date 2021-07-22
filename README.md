@@ -35,3 +35,12 @@ ln -s /.vim/vimrc ~/.vimrc
 git submodule init
 git submodule update
 ```
+## 配置tmux
+```sh
+ln -s -f dotfiles/.tmux/.tmux.conf ~/.tmux.conf
+cp dotfiles/.tmux/.tmux.conf.local .
+#编辑vim .tmux.conf.local
+set -g mouse on
+set -g status-keys vi
+set -g mode-keys vi
+```
