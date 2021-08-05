@@ -97,55 +97,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
- #SET Tmux
-alias cl='clear'
-alias tn='tmux new -s'
-alias tks='tmux kill-server'
-alias ta='tmux attach -t'
-alias tkw='tmux kill-window -t'
-
-#SET SERVER
-alias s137='ssh root@192.216.20.137'
-alias s136='ssh root@192.216.20.136'
-alias s135='ssh root@192.216.20.135'
-alias s134='ssh root@192.216.20.134'
-
-alias s153='ssh root@192.216.20.153'
-
-alias s143='ssh root@192.216.20.143'
-alias s144='ssh root@192.216.20.144'
-alias s145='ssh root@192.216.20.145'
-alias s120='ssh root@192.216.20.120'
-alias s146='ssh root@192.216.20.146'
-alias s186='ssh root@192.216.20.186'
-alias s187='ssh root@192.216.20.187'
-
-alias srsu='ssh root@172.17.10.2'
-alias ll='ls -la'
-
-alias lg='lazygit'
-
-#alias s230214='ssh dtvl@192.168.230.214'
-alias s1127='ssh root@10.255.11.27'
-
-function cpNcs(){
-	scp "$1" root@192.216.20."$2":/system/bin
-}
-function do-scp(){
-	scp "$1" root@192.216.20."$2":"$3"
-}
-function cpLib(){
-	scp "$1" root@192.216.20."$2":/system/lib
-}
-
-export PATH=/home/kingwq/cmake-3.17.0-Linux-x86_64/bin:$PATH
-#SET ARM_LINUX GCC
-export GCC_ARM_GCC=/mnt/d/code/r14_ltev2x_app/build/toolchain/gcc-4.9-2016.02-x86_64_arm-linux-gnueabi/bin/arm-linux-gnueabi-gcc
-export GCC_ARM_GXX=/mnt/d/code/r14_ltev2x_app/build/toolchain/gcc-4.9-2016.02-x86_64_arm-linux-gnueabi/bin/arm-linux-gnueabi-g++
-export GCC_ARM_INCLUDE_PATH=/mnt/d/code/r14_ltev2x_app/build/toolchain/gcc-4.9-2016.02-x86_64_arm-linux-gnueabi/include
-export GCC_ARM_LIB_PATH=/mnt/d/code/r14_ltev2x_app/build/toolchain/gcc-4.9-2016.02-x86_64_arm-linux-gnueabi/lib
-export GCC_ARM_PATH=/mnt/d/code/r14_ltev2x_app/build/toolchain/gcc-4.9-2016.02-x86_64_arm-linux-gnueabi
 . /usr/share/autojump/autojump.sh
 
-export PATH=$PATH:/home/kingwq/.config/coc/extensions/coc-clangd-data/install/clangd_11.0.0/bin
 export DOCKER_HOST=tcp://localhost:2375
+
+source ~/.config/zsh/env.zsh
+source ~/.config/zsh/aliases.zsh
+source ~/.config/zsh/vi.zsh
