@@ -12,6 +12,8 @@ nnoremap zp gT
 nnoremap <leader>y vawy
 nnoremap <leader>p vawp
 nnoremap <leader>q :q<cr>
+" 语法高亮后取消高亮
+noremap <BackSpace> :noh<cr>
 
 set surround
 
