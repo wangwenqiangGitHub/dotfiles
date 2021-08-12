@@ -44,3 +44,10 @@ set -g mouse on
 set -g status-keys vi
 set -g mode-keys vi
 ```
+## 配置coc-nvim关于c++代码补全
+```sh
+cp coc-settings.json ~/.vim
+sudo apt install ccls
+#cpp项目中CMakeLists.txt添加命令生成compile_commands.json在build目录下
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+```
