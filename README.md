@@ -63,3 +63,8 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 ```sh
 sudo apt install neofetch
 ```
+## 搭建go开发环境
+```sh
+ sudo tar -C /usr/local -xvf go1.16.6.linux-amd64.tar.gz
+ mkdir ~/go
+```
