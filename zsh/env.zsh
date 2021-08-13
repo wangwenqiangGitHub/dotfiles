@@ -4,6 +4,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
+export GOPROXY=https://goproxy.cn
 #cmake
 export PATH=/home/kingwq/cmake-3.17.0-Linux-x86_64/bin:$PATH
 #SET ARM_LINUX GCC

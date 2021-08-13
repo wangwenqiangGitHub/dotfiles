@@ -83,7 +83,7 @@ function try_until_success(){
 #exit
 #fi
 #}
-#alias s='neofetch'
+alias s='neofetch'
 #alias g='onefetch'
 #alias sudo='sudo -E'
 #alias vim='nvim'

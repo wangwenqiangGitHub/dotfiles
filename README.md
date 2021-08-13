@@ -51,3 +51,15 @@ sudo apt install ccls
 #cpp项目中CMakeLists.txt添加命令生成compile_commands.json在build目录下
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 ```
+## 安装autojump
+```sh
+sudo apt install autojump
+```
+## 安装zsh中的plug
+```sh
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+```
+## 安装neofetch
+```sh
+sudo apt install neofetch
+```
