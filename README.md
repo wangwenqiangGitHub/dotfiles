@@ -68,3 +68,9 @@ sudo apt install neofetch
  sudo tar -C /usr/local -xvf go1.16.6.linux-amd64.tar.gz
  mkdir ~/go
 ```
+## 安装linuxbrew
+```sh
+./install_Linuxbrew.sh
+```
+## Ultisnips
+- 具体设置是在coc-settings中设置路径
