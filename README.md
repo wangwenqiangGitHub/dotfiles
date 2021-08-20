@@ -58,7 +58,36 @@ sudo apt install autojump
 ## 安装zsh中的plug
 ```sh
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+
 ```
+- zsh中的主题安装
+	- 安装Powerlevel9k
+	```sh
+	git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+	```
+	- 设置 ~/.zshrc
+	```sh
+	ZSH_THEME="powerlevel9k/powerlevel9k"
+	POWERLEVEL9K_MODE='nerdfont-complete'
+	POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable vcs vi_mode)
+	POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
+	POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+	```
+	- install PowerlineSymbols
+	```sh
+	wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+	wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+	mkdir -p  ~/.local/share/fonts/
+	mkdir -p ~/.config/fontconfig/conf.d/
+	mv PowerlineSymbols.otf ~/.local/share/fonts/
+	fc-cache -vf ~/.local/share/fonts/
+	mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+	```
+	- 安装字体  
+	[Meslo_LG_M_Regular_Nerd_Font_Complete_Mono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/M/Regular/complete/Meslo%20LG%20M%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)字体  
+	[DejaVuSansMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete.ttf)字体
+
+
 ## 安装neofetch
 ```sh
 sudo apt install neofetch
