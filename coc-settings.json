@@ -67,8 +67,8 @@
 	"importCost.showCalculatingDecoration": true,
 	"importCost.debug": false,
 	"snippets.ultisnips.directories": [
-		"$HOME/.config/nvim/Ultisnips/",
-		"$HOME/.config/nvim/plugged/vim-snippets/UltiSnips/"
+		"$HOME/.config/Ultisnips/",
+		"$HOME/.vim/bundles/vim-snippets/UltiSnips/"
 	],
 	"coc.preferences.formatOnSaveFiletypes": [
 		"javascript",
@@ -110,7 +110,7 @@
 	"explorer.keyMappings.global": {
 		"u": "nodePrev",
 		"e": "nodeNext",
-		"h": "toggleSelection",
+		"s": "toggleSelection",
 		"<tab>": "actionMenu",
 		"gl": "expandRecursive",
 		"gh": "collapseRecursive",
@@ -120,7 +120,7 @@
 		"o": ["wait", "expanded?", "collapse", "expand"],
 		"O": "open:tab",
 		"n": "collapse",
-		"l": "gotoParent",
+		"gp": "gotoParent",
 		"yp": "copyFilepath",
 		"yn": "copyFilename",
 		"yy": "copyFile",
@@ -128,7 +128,6 @@
 		"pp": "pasteFile",
 		"dD": "deleteForever",
 		"a": "addFile",
-		"k": "addFile",
 		"M": "addDirectory",
 		"cw": "rename",
 		".": "toggleHidden",
