@@ -9,8 +9,19 @@ export ZSH=$HOME/.oh-my-zsh
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-
+# ZSH_THEME="powerlevel9k/powerlevel9k"
 # 隐藏自己的用户名
+# DEFAULT_USER=`id -un`
+# 含有icon的字型,前提你的字体有icon
+# POWERLEVEL9K_MODE='nerdfont-complete'
+# command line 左边提示内容(文件夹路径、文件夹读写状态、版本控制资讯)
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable vcs vi_mode)
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable vcs)
+#command line 右边提示内容(状态、时间)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
+# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+
+# 摘抄自https://github.com/Powerlevel9k/powerlevel9k/wiki/Show-Off-Your-Config#p9kgt
 ZSH_THEME="powerlevel9k/powerlevel9k"
 DEFAULT_USER=`id -un`
 # 含有icon的字型,前提你的字体有icon
@@ -257,7 +268,9 @@ source $ZSH/oh-my-zsh.sh
 . /usr/share/autojump/autojump.sh
 
 export DOCKER_HOST=tcp://localhost:2375
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
 source ~/.config/zsh/env.zsh
 source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/vi.zsh
+# source ~/.config/zsh/powerlevel9k.zsh
