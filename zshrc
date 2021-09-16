@@ -168,6 +168,16 @@ then
     POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND=$P9KGT_YELLOW
 
 fi
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+# 隐藏自己的用户名
+# DEFAULT_USER=`id -un`
+# 含有icon的字型,前提你的字体有icon
+# POWERLEVEL9K_MODE='nerdfont-complete'
+# command line 左边提示内容(文件夹路径、文件夹读写状态、版本控制资讯)
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable vcs vi_mode)
+#command line 右边提示内容(状态、时间)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
+# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
