@@ -7,7 +7,11 @@ nnoremap zn gt
 " prev tab
 nnoremap zp gT
 
-" let mapleader=','
+let mapleader=" "
+
+noremap ss :w<cr>
+noremap zz :wq<cr>
+inoremap jj <esc>
 
 nnoremap <leader>y vawy
 nnoremap <leader>p vawp

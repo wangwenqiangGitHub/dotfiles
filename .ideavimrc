@@ -1,0 +1,107 @@
+"为IdeaVim插件增加自动切换英文输入法的功能
+set keep-english-in-normal-and-restore-in-insert
+
+let mapleader=" "
+
+"显示行号
+set nu
+"显示相对行号
+set rnu
+"高亮搜索
+set hlsearch
+" 自动定位到输入中的字符串，不需要回车搜索
+set incsearch
+" 共享系统粘贴板
+set clipboard=unnamed
+" 搜索时智能匹配大小写
+set ignorecase smartcase
+" 设置相对行号
+"set relativenumber
+
+noremap L $
+noremap H ^
+noremap ; :
+
+" Normal + Visual
+noremap * *zz
+noremap # #zz
+noremap ss :w<cr>
+noremap zz :wq<cr>
+
+inoremap jj <esc>
+
+noremap <leader>q :q<cr>
+
+" 设置debug为 zd
+nnoremap zd :action Debug<CR>
+" 设置run 为 zr
+nnoremap zr :action Run<CR>
+
+" set plug
+"g:EasyMotion_override_acejump = 0
+" 设置依赖于IdeaVim-EasyMotion 和 AceJump 两个插件
+set easymotion
+" 启用vim surround功能
+set surround
+" multiple-cursors
+set multiple-cursors
+" 注释插件模拟
+set commentary
+
+nnoremap <leader>y vawy
+nnoremap <leader>p vawp
+"let mapleader=";"
+nnoremap <leader>r :action RunClass<CR>
+"跳转到定义
+noremap <leader>gd :action GotoDeclaration<CR>
+
+
+nnoremap cw ciw
+nnoremap dw daw
+nnoremap vw viw
+nnoremap yw yiw
+
+nnoremap c" ci"
+nnoremap d" di"
+nnoremap v" vi"
+nnoremap y" yi"
+
+nnoremap c' ci'
+nnoremap d' di'
+nnoremap v' vi'
+nnoremap y' yi'
+
+nnoremap c) ci)
+nnoremap d) di)
+nnoremap v) vi)
+nnoremap y) yi)
+nnoremap c( ca(
+nnoremap d( da(
+nnoremap v( va(
+nnoremap y( ya(
+
+nnoremap c} ci}
+nnoremap d} di}
+nnoremap v} vi}
+nnoremap y} yi}
+nnoremap c{ ca{
+nnoremap d{ da{
+nnoremap v{ va{
+nnoremap y{ ya{
+
+nnoremap c] ci]
+nnoremap d] di]
+nnoremap v] vi]
+nnoremap y] yi]
+nnoremap c[ ca[
+nnoremap d[ da[
+nnoremap v[ va[
+nnoremap y[ ya[
+
+nnoremap c> ci>
+nnoremap d> di>
+nnoremap v> vi>
+nnoremap y> yi>
+nnoremap c< ca<
+nnoremap d< da<
+nnoremap v< va<
