@@ -9,8 +9,8 @@ nnoremap zp gT
 
 let mapleader=" "
 
-noremap ss :w<cr>
-noremap zz :wq<cr>
+noremap <leader>s :w<cr>
+noremap <leader>z :wq<cr>
 inoremap jj <esc>
 
 nnoremap <leader>y vawy
