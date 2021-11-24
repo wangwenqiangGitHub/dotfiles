@@ -1,0 +1,3 @@
+-git 
+	git difftool --extcmd icdiff
+	git config --global icdiff.options '--highlight --line-numbers'

@@ -1,0 +1,7 @@
+- 解除端口占用
+	netstat -aon|findstr 15490
+	- TCP    127.0.0.1:15490        0.0.0.0:0              LISTENING       11864
+	tasklist | findstr  11864
+	- v2ray.exe                    11864 Console                    1     22,000 K
+	taskkill -PID 11864 -F
+	- 成功: 已终止 PID 为 11864 的进程。
