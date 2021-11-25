@@ -4,6 +4,9 @@
 alias tn='tmux new -s'
 alias tks='tmux kill-server'
 alias ta='tmux attach -t'
+#tmux默认会同步会话到所有窗口，并使用尺寸最小窗口的尺寸，这会造成大窗口有小点。
+#使用以下方式来解决:tmux at -d #简写为 tmux a -d
+alias td='tmux at -d'
 alias tkw='tmux kill-window -t'
 
 #=======================================================
