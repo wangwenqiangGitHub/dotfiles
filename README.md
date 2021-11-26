@@ -55,6 +55,18 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 ```sh
 sudo apt install autojump
 ```
+## 或者安装z.lua
+```sh
+#性能比 z.sh 快三倍，比 fasd / autojump 快十倍以上。
+#https://github.com/skywind3000/z.lua
+if [ -x $HOME/.config/zsh/z.lua/z.lua ]; then
+    export _ZL_DATA=$HOME/.config/zsh/zluadata
+    export _ZL_ADD_ONCE=1
+    export _ZL_MATCH_MODE=1
+    export _ZL_HYPHEN=1
+    eval "$(lua $HOME/.config/zsh/z.lua/z.lua --init zsh)"
+fi
+```
 ## 安装zsh中的plug
 ```sh
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions

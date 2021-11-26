@@ -4,3 +4,6 @@
 [submodule ".tmux"]
 	path = .tmux
 	url = https://github.com/gpakosz/.tmux.git
+[submodule "z.lua"]
+	path = z.lua
+	url = git@github.com:skywind3000/z.lua.git
