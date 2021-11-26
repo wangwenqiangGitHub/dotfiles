@@ -115,3 +115,13 @@ sudo apt install neofetch
 ```
 ## Ultisnips
 - 具体设置是在coc-settings中设置路径
+
+## 安装cheat
+```
+https://github.com/cheat/cheat
+#修改~/.config/cheat/conf.yml添加
+  - name: cheat
+    path: ~/dotfiles/cheat
+    tags: [ personal ]
+    readonly: false
+```
