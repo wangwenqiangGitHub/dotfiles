@@ -1,0 +1,12 @@
+- vim关闭多个窗口中其中一个
+  ctrl-w c # 关闭当前
+  ctrl-w o #only,关闭其他窗口
+
+- vim-table
+  gt #在多个标签页切换
+
+- 行查找
+  f<char> t<char> # 是否包含这个单词
+
+- command
+  :%s/old_char/new_char/g #全局替换

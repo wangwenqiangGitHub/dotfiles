@@ -5,3 +5,10 @@
 	- v2ray.exe                    11864 Console                    1     22,000 K
 	taskkill -PID 11864 -F
 	- 成功: 已终止 PID 为 11864 的进程。
+- wsl
+  cmd.exe #CMD命令提示符
+  calc.exe：#启动计算器
+  control.exe：#控制面版
+  mspaint：#画图
+  mstsc.exe #远程桌面
+
