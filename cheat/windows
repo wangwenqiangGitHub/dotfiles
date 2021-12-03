@@ -12,3 +12,8 @@
   mspaint：#画图
   mstsc.exe #远程桌面
 
+- conda
+  conda env list #查看所有目录
+  conda update --all # 更新
+  activate <环境>
+  pip install <包名>
