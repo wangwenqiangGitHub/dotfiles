@@ -125,3 +125,15 @@ https://github.com/cheat/cheat
     tags: [ personal ]
     readonly: false
 ```
+# Manjaro
+
+```
+#设置国内镜像
+sudo pacman-mirrors -i -c China
+#更新系统
+sudo pacman -Syyu
+#安装i3
+sudo pacman -S i3-gaps picom i3lock xss-lock polybar alacritty feh rofi
+#需要注销重新选择i3重新启动
+
+```
