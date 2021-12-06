@@ -14,6 +14,8 @@
 
 - conda
   conda env list #查看所有目录
+  conda env remove -n <环境>
   conda update --all # 更新
   activate <环境>
   pip install <包名>
+
