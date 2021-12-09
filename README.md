@@ -137,3 +137,14 @@ sudo pacman -S i3-gaps picom i3lock xss-lock polybar alacritty feh rofi
 #需要注销重新选择i3重新启动
 
 ```
+# ranger
+```
+#安装ranger生成自动的配置
+ranger --copy-config=all
+commands.py 可以添加自己的命令
+rc.py主要的配置文件
+rifile.conf打开文件需要用那个
+scope.sh如何预览文件
+#安装fzf插件
+sudo apt-get install fzf 
+```
