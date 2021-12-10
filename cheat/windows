@@ -13,7 +13,7 @@
   mstsc.exe #远程桌面
 
 - conda
-  # 管理员权限
+  # 管理员权限 网络正常
   conda env list #查看所有目录
   conda env remove -n <环境>
   conda update --all # 更新
