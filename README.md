@@ -159,4 +159,27 @@ QT_IM_MODULE  DEFAULT=fcitx
 XMODIFIERS    DEFAULT=@im=fcitx
 ```
 # Manjaro google-chrome-statble
+# Manjaro VMware共享文件目录丢失还原
+```
+vmware-hgfsclient
+#查看映射的共享目录 我的是D盘
+#将宿主机共享目录映射在虚拟机中
+sudo vmhgfs-fuse -o allow_other -o auto_unmount.host:/D /mnt/hgfs/D
+```
+# i3 
+```
+# 配置壁纸
+yay -S feh variety # i3中配置添加
+
+exec_always variety -b 
+# 安装字体表情
+yay -S ttf-linux-libertine ttf-inconsolata ttf-joypixels ttf-twemoji-color noto-fonts-emoji ttf-liberation ttf-droid
+# 安装字体
+yay -S wqy-bitmapfont wqy-microhei wqy-microhei-lite wqy-zenhei adobe-source-han-mono-cn-fonts adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts
+```
+
+|  软件名称| 安装|
+|  ----  | ----  |
+| bmenu| 菜单软件 |
+| feh  variety   | 壁纸|
 
