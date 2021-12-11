@@ -148,3 +148,15 @@ scope.sh如何预览文件
 #安装fzf插件
 sudo apt-get install fzf 
 ```
+# Manjaro 中文输入法
+```
+# 输入法安装参考：https://www.youtube.com/watch?v=YISc8bBJOgA
+sudo pacman -S fcitx-im fcitx-configtool kcm-fcitx 
+vim ~/.pam_environment
+#添加如下内容
+GTK_IM_MODULE DEFAULT=fcitx
+QT_IM_MODULE  DEFAULT=fcitx
+XMODIFIERS    DEFAULT=@im=fcitx
+```
+# Manjaro google-chrome-statble
+
