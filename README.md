@@ -203,4 +203,34 @@ yay -S wqy-bitmapfont wqy-microhei wqy-microhei-lite wqy-zenhei adobe-source-han
 | ,2     | 二级标题   |
 | ,3     | 三级标题   |
 | ,4     | 四级标题   |
+---
 
+# tmux快捷键
+| 命令                | 说明                                     | 快捷键    |
+|---------------------|------------------------------------------|-----------|
+| tmux new -s         | 创建会话                                 | tn <名字> |
+| tmux detach         | 退出当前会话，会话进程仍然在后台运行     | prefix d  |
+| tmux ls             | 查看当前的会话                           | prefix s  |
+| tmux attach -t      | 重新接入某个已经存在的会话               |           |
+| tmux kill-session   | 杀死某个会话                             |           |
+| tmux switch -t      | 切换会话                                 |           |
+| tmux rename-session | 重命名会话                               | prefix $  |
+| tmux at -d          | 重绘窗口，在不同屏幕上保持窗口为最小尺寸 |           |
+**tmux默认会同步会话到所有窗口，并使用最小尺寸，会造成大窗口有些小**  
+解决方式：
+```shell
+tmux at -d #简写为tmux a -d
+```
+
+## 窗口管理
+窗口属于会话，窗口包含多个窗口
+| 命令                  | 说明       | 快捷键   |
+|-----------------------|------------|----------|
+| tmux new-window -n    | 创建新窗口 | prefix c |
+| tmux select-window -t | 切换窗口   |          |
+| tmux rename-window    | 重命名     | prefix b |
+## 切换窗口
+| 命令     | 说明           |
+|----------|----------------|
+| prefix p | 切换上一个窗口 |
+| prefix n | 切换下一个窗口 |
