@@ -178,8 +178,29 @@ yay -S ttf-linux-libertine ttf-inconsolata ttf-joypixels ttf-twemoji-color noto-
 yay -S wqy-bitmapfont wqy-microhei wqy-microhei-lite wqy-zenhei adobe-source-han-mono-cn-fonts adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts
 ```
 
-|  软件名称| 安装|
-|  ----  | ----  |
-| bmenu| 菜单软件 |
-| feh  variety   | 壁纸|
+| 软件名称     | 安装       |
+| ----         | ----       |
+| bmenu        | 菜单软件   |
+| feh  variety | 壁纸       |
+| i3           | 窗口管理器 |
+| dwm          | 窗口管理   |
+| st           | 终端       |
+
+# markdown快捷键
+| 快捷键 | 功能       |
+|--------|------------|
+| ,f     | 查找锚点   |
+| ,i     | 斜体       |
+| ,s     | 删除波浪线 |
+| ,n     | 分割线     |
+| ,b     | 加粗       |
+| ,d     | 灰底       |
+| ,c     | 代码块     |
+| ,m     | 待办事项   |
+| ,p     | 插入图片   |
+| ,a     | 插入链接   |
+| ,1     | 一级标题   |
+| ,2     | 二级标题   |
+| ,3     | 三级标题   |
+| ,4     | 四级标题   |
 
