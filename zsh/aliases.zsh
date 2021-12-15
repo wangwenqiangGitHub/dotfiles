@@ -98,3 +98,6 @@ alias s='neofetch'
 #alias ta='tmux a'
 #alias t='tmux'
 #alias lo='lsof -p $(fps) +w'
+alias sgk='ssh-keygen -t rsa -b 4096 -C'
+alias vmware_mnt='sudo vmhgfs-fuse -o allow_other -o auto_unmount .host:/D /mnt/hgfs'
+
