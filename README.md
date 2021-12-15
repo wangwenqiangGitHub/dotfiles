@@ -230,7 +230,85 @@ tmux at -d #简写为tmux a -d
 | tmux select-window -t | 切换窗口   |          |
 | tmux rename-window    | 重命名     | prefix b |
 ## 切换窗口
-| 命令     | 说明           |
-|----------|----------------|
-| prefix p | 切换上一个窗口 |
-| prefix n | 切换下一个窗口 |
+| 命令     | 说明                 |
+|----------|----------------------|
+| prefix p | 切换上一个窗口       |
+| prefix n | 切换下一个窗口       |
+| prefix b | 切换到指定窗口的编号 |
+| prefix w | 从列表中选择窗口     |
+| prefix & | 关闭当前窗口         |
+| prefix x | 删除窗口             |
+## 窗格管理
+| 命令                | 说明             |
+|---------------------|------------------|
+| tmux split-window-h | 划分左右两个窗格 |
+| tmux split-window   | 划分上下两个窗口 |
+## 移动窗口
+| 命令                | 说明               |
+|---------------------|--------------------|
+| tmux select-pane-U  | 光标切换到上方窗格 |
+| tmux select-pane -D | 光标切换到下方窗格 |
+| tmux select-pane -L | 光标切换到左边窗格 |
+| tmux select-pane -R | 光标切换到右边窗格 |
+| tmux swap-pane -U   | 当前窗格上移       |
+| tmux swap-pane -D   | 当前窗格下移       |
+## 窗格快捷键
+| 快捷键            | 说明                                       |
+|-------------------|--------------------------------------------|
+| Ctrl+b %          | 划分左右两个窗格                           |
+| Ctrl+b "          | 划分上下两个窗格                           |
+| Ctrl+b ;          | 切换到上一个窗格                           |
+| Ctrl+b o          | 光标切换到下一个窗格                       |
+| Ctrl+b {          | 当前窗格左移                               |
+| Ctrl+b }          | 当前窗格右移                               |
+| Ctrl+b Ctrl+o     | 当前窗格上移                               |
+| Ctrl+b Alt+o      | 当前窗格下移                               |
+| Ctrl+b x          | 关闭当前窗格                               |
+| Ctrl+b !          | 将当前窗格拆分为一个独立窗口               |
+| Ctrl+b z          | 当前窗格全屏显示，再使用一次会变回原来大小 |
+| Ctrl+b q          | 显示窗格编号                               |
+| Ctrl+b Alt+方向键 | 调整窗格大小                               |
+## 插件管理
+- tmp与tmux-resurrect
+```shell
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/resurrect
+```
+
+-修改配置文件~/.tmux.conf添加
+```sh
+#自动保存
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @continuum-save-interval '15'
+set -g @continuum-restore 'on'
+set -g @resurrect-capture-pane-contents 'on'
+run '~/.tmux/plugins/tpm/tpm'
+
+run-shell ~/.tmux/plugins/resurrect/resurrect.tmux
+#重启
+tmux source ~/.tmux.conf
+```
+**保存会话** 
+```sh
+prefix + ctrl-s
+```
+
+**恢复会话**
+```
+prefix ctrl-r
+```
+
+# 代理配置
+| 软件    | 命令                                                                                                         |
+|---------|--------------------------------------------------------------------------------------------------------------|
+| git     | git config --global http.proxy http://127.0.0.1:1080 git config --global  https.proxy https://127.0.0.1:1080 |
+| git     | git config --global --unset http.proxy git config --global http.proxy http://127.0.0.1:1080                  |
+| scoop   |                                                                                                              |
+| npm     | npm config delete proxy                                                                                      |
+| you-get |                                                                                                              |
+
+# github下载
+- git clone https://hub.fastgit.org/you
