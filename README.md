@@ -312,3 +312,16 @@ prefix ctrl-r
 
 # github下载
 - git clone https://hub.fastgit.org/you
+
+# dwm设置方法
+```
+# 1.创建dwm.desktop文件,存放在/usr/share/xsession
+[Desktop Entry]
+Encoding=UTF-8
+Name=Dwm
+Comment=Dynamic window manager
+Exec=dwm
+Icon=dwm
+Type=XSession
+# 2.修改dwm文件，sudo make clean install
+```
