@@ -26,9 +26,10 @@ alias sra='sudo -E ranger'
 # SET git
 #=======================================================
 alias gc='git config credential.helper store'
-alias gs='git config credential.helper store'
+# alias gs='git config credential.helper store'
 alias gg='git clone'
-
+# 克隆项目有子模块 忘记添加 --recurse-submodules
+alias gs='git submodule update --init'
 #=======================================================
 # SET 服务器连接
 #=======================================================
