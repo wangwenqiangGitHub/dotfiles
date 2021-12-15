@@ -1,4 +1,4 @@
-# 版本管理dotfiles
+# 版G管理dotfiles
 - 将本机所有的vim插件及配置文件统一进行管理，安装所有的文件在~/.vim下，每次修改只要同步既可
 ## 目录结构
 ```sh
@@ -325,3 +325,19 @@ Icon=dwm
 Type=XSession
 # 2.修改dwm文件，sudo make clean install
 ```
+dwm快捷键
+| 快捷键          | 说明                  |
+|-----------------|-----------------------|
+| mod j           | 切换聚焦窗口          |
+| mod k           | 切换聚焦窗口          |
+| mod '           | scratchpad小窗口      |
+| mod u           | 隐藏桌面              |
+| mod shift u     | 显示隐藏桌面          |
+| mod shift f     | 全屏                  |
+| mod shift space | 取消全屏              |
+| mod ctrl s      | screenkey软件打开关闭 |
+
+st快捷键
+| 快捷键       | 说明 |
+| ctrl shift c | 复制 |
+| ctrl shift v | 粘贴 |
