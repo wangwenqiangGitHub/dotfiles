@@ -187,6 +187,7 @@ yay -S wqy-bitmapfont wqy-microhei wqy-microhei-lite wqy-zenhei adobe-source-han
 | st           | 终端       |
 
 # markdown快捷键
+- :TableModeEnable 触发表格格式化 ;按住||触发
 | 快捷键 | 功能       |
 |--------|------------|
 | ,f     | 查找锚点   |
@@ -336,6 +337,7 @@ dwm快捷键
 | mod shift f     | 全屏                  |
 | mod shift space | 取消全屏              |
 | mod ctrl s      | screenkey软件打开关闭 |
+| mod s           | 启动dmenu             |
 
 st快捷键
 | 快捷键       | 说明 |
