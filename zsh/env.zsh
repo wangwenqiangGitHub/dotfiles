@@ -4,15 +4,21 @@ export XDG_CONFIG_HOME=$HOME/.config
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
-export GOPROXY=https://goproxy.cn
 #cmake
-export PATH=/home/kingwq/cmake-3.17.0-Linux-x86_64/bin:$PATH
+export PATH=/home/kingwq/cmake-3.23.0-rc4-linux-x86_64/bin:$PATH
 #SET ARM_LINUX GCC
 export GCC_ARM_GCC=/mnt/d/code/r14_ltev2x_app/build/toolchain/gcc-4.9-2016.02-x86_64_arm-linux-gnueabi/bin/arm-linux-gnueabi-gcc
 export GCC_ARM_GXX=/mnt/d/code/r14_ltev2x_app/build/toolchain/gcc-4.9-2016.02-x86_64_arm-linux-gnueabi/bin/arm-linux-gnueabi-g++
 export GCC_ARM_INCLUDE_PATH=/mnt/d/code/r14_ltev2x_app/build/toolchain/gcc-4.9-2016.02-x86_64_arm-linux-gnueabi/include
 export GCC_ARM_LIB_PATH=/mnt/d/code/r14_ltev2x_app/build/toolchain/gcc-4.9-2016.02-x86_64_arm-linux-gnueabi/lib
 export GCC_ARM_PATH=/mnt/d/code/r14_ltev2x_app/build/toolchain/gcc-4.9-2016.02-x86_64_arm-linux-gnueabi
+
+# SET ARM_LINUX aarch64 gcc
+export AARCH_GCC_ARM_GCC=/mnt/d/Tools/arm-linux/gcc-arm-8.3-2019.03-x86_64-aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc
+export AARCH_GCC_ARM_GXX=/mnt/d/Tools/arm-linux/gcc-arm-8.3-2019.03-x86_64-aarch64-linux-gnu/bin/aarch64-linux-gnu-g++
+export AARCH_GCC_ARM_INCLUDE_PATH=/mnt/d/Tools/arm-linux/gcc-arm-8.3-2019.03-x86_64-aarch64-linux-gnu/include
+export AARCH_GCC_ARM_LIB_PATH=/mnt/d/Tools/arm-linux/gcc-arm-8.3-2019.03-x86_64-aarch64-linux-gnu/lib
+export AARCH_GCC_ARM_PATH=/mnt/d/Tools/arm-linux/gcc-arm-8.3-2019.03-x86_64-aarch64-linux-gnu
 #clang
 export PATH=$PATH:/home/kingwq/.config/coc/extensions/coc-clangd-data/install/clangd_11.0.0/bin
 # homebrew
@@ -58,3 +64,4 @@ export PATH=$PATH:/home/kingwq/.local/bin
 #export EDITOR=nvim
 #export ZSH_AUTOSUGGEST_USE_ASYNC=1
 #export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+export DEFAULT_CHEAT_DIR=$HOME/dotfiles/cheat/
