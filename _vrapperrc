@@ -1,26 +1,29 @@
+"http://vrapper.sourceforge.net/documentation/?topic=optional_plugins
+
 noremap L $
 noremap H ^
-noremap ; :
 
-" next tab
+let mapleader="<Space>"
+noremap <leader>; :
+noremap <leader>e :g/^$/,/./-1j<cr>
 nnoremap zn gt
-" prev tab
 nnoremap zp gT
 
-let mapleader=" "
+inoremap jj <Esc>
+
+eclipseaction eclipseopenresource org.eclipse.ui.navigate.openResource
+nnoremap <leader>ff :eclipseopenresource<cr>
 
 noremap <leader>s :w<cr>
-noremap <leader>z :wq<cr>
-inoremap jj <esc>
 
-nnoremap <leader>y vawy
-nnoremap <leader>p vawp
+" nnoremap <leader>y vawy
+" nnoremap <leader>p vawp
+nnoremap <leader>p "0p
 nnoremap <leader>q :q<cr>
 " 语法高亮后取消高亮
 noremap <BackSpace> :noh<cr>
 
 set surround
-
 set nu
 set relativenumber
 " 高亮搜索
@@ -35,6 +38,9 @@ set clipboard=unnamed
 set ignorecase smartcase
 
 noremap * *zz
+
+nmap <Leader><Leader> V
+vmap <Leader><Leader> <Esc>
 
 nnoremap cw ciw
 nnoremap dw daw
@@ -86,4 +92,3 @@ nnoremap c< ca<
 nnoremap d< da<
 nnoremap v< va<
 nnoremap y< ya<
-

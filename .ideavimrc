@@ -33,9 +33,9 @@ inoremap jj <esc>
 noremap <leader>q :q<cr>
 
 " 设置debug为 zd
-nnoremap zd :action Debug<CR>
+nnoremap <leader>d :action Debug<CR>
 " 设置run 为 zr
-nnoremap zr :action Run<CR>
+nnoremap <leader>r :action Run<CR>
 
 " set plug
 "g:EasyMotion_override_acejump = 0
@@ -54,7 +54,59 @@ nnoremap <leader>p vawp
 nnoremap <leader>r :action RunClass<CR>
 "跳转到定义
 noremap <leader>gd :action GotoDeclaration<CR>
+nmap <Leader><Leader> V
+vmap <Leader><Leader> <Esc>
+nmap <leader>m %
 
+
+" easy window navigation
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-h> <c-w>h
+nnoremap <c-k> <c-w>k
+nnoremap <a-h> gT
+nnoremap <a-l> gt
+nnoremap <c-s-tab> gT
+nnoremap <c-tab> gt
+
+" clear the search buffer when hitting return
+nnoremap <space><cr> :nohlsearch<cr>
+
+
+" code navigation
+nnoremap <space>] :action GotoImplementation<cr>
+nnoremap <space>[ :action GotoSuperMethod<cr>
+nnoremap <space>u :action FindUsages<cr>
+nnoremap <space>gt :action GotoTest<cr>
+nnoremap <space>k :action HighlightUsagesInFile<cr>
+nnoremap \R :action RunClass<cr>
+nnoremap \r :action Run<cr>
+nnoremap \D :action DebugClass<cr>
+nnoremap \d :action Debug<cr>
+nnoremap \c :action CheckStyleCurrentFileAction<cr>
+
+" actios
+""https://gist.github.com/zchee/9c78f91cc5ad771c1f5d   zchee/actionlist.vim
+noremap <space>\ :action VimFilePrevious<cr>
+"文件查找
+nnoremap <space>ff :action SearchEverywhere<cr>
+nnoremap <space>fs :action GotoSymbol<cr>
+nnoremap <space>fa :action GotoAction<cr>
+nnoremap <space>fb :action ToggleLineBreakpoint<cr>
+nnoremap <space>fc   :action GotoClass<cr>
+nnoremap <space>fw :action ReplaceInPath<cr>
+
+nnoremap <space>q! :action CloseProject<cr>
+
+
+“ buffer
+nnoremap <space>e :action Switcher<cr>
+"函数列表 <C-F12>
+nnoremap <space>fo :action FileStructurePopup<cr>
+" previous method
+noremap [[ <ESC>:action MethodUp<CR>
+" next method
+noremap ]] <ESC>:action MethodDown<CR>
 
 nnoremap cw ciw
 nnoremap dw daw
