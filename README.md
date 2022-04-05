@@ -98,7 +98,13 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 	- 安装字体  
 	[Meslo_LG_M_Regular_Nerd_Font_Complete_Mono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/M/Regular/complete/Meslo%20LG%20M%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)字体  
 	[DejaVuSansMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete.ttf)字体
-
+## powerleve10k
+```sh
+# 配置方法
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+ZSH_THEME="powerlevel10k/powerlevel10k"
+p10k configure
+```
 
 ## 安装neofetch
 ```sh
