@@ -25,11 +25,16 @@ alias sra='sudo -E ranger'
 #=======================================================
 # SET git
 #=======================================================
-alias gc='git config credential.helper store'
-# alias gs='git config credential.helper store'
+alias gs='git status'
+alias ga='git add .'
+alias gc='git commit -m'
+alias gkey='git config credential.helper store'
 alias gg='git clone'
-# 克隆项目有子模块 忘记添加 --recurse-submodules
-alias gs='git submodule update --init'
+alias gp='git push origin master'
+alias git_ignore_file='git update-index --assume-unchanged'
+alias git_cancel_all="git ls-files -v | grep '^h\ ' | awk '{print \$2}' | xargs git update-index --no-assume-unchanged"
+alias git_ls_ignore_file="git ls-files -v | grep '^h\ '| awk '{print \$2}'"
+alias vpn='export http_proxy=http://0.0.0.0:8229'
 #=======================================================
 # SET 服务器连接
 #=======================================================
@@ -38,6 +43,7 @@ alias s136='ssh root@192.216.20.136'
 alias s135='ssh root@192.216.20.135'
 alias s134='ssh root@192.216.20.134'
 
+alias s151='ssh root@192.216.20.151'
 alias s153='ssh root@192.216.20.153'
 
 alias s143='ssh root@192.216.20.143'
@@ -50,7 +56,7 @@ alias s187='ssh root@192.216.20.187'
 
 alias srsu='ssh root@172.17.10.2'
 alias s1127='ssh root@10.255.11.27'
-
+alias wwq='ssh wwq@49.233.53.119'
 #=======================================================
 # 设置函数
 #=======================================================
@@ -73,7 +79,10 @@ function try_until_success(){
 		echo
 	done
 }
-
+fweather()
+{
+	curl -H "Accept-Language: zh" "http://wttr.in/${1-beijing}?m&${2-3}"
+}
 #alias ipy='ipython'
 #alias ms='mailsync'
 #alias mt='neomutt'
@@ -87,8 +96,12 @@ function try_until_success(){
 #exit
 #fi
 #}
+
+#======================================================================
+# 小工具
+#======================================================================
 alias s='neofetch'
-#alias g='onefetch'
+alias g='onefetch'
 #alias sudo='sudo -E'
 #alias vim='nvim'
 #alias bat='sudo tlp bat'
@@ -99,6 +112,3 @@ alias s='neofetch'
 #alias ta='tmux a'
 #alias t='tmux'
 #alias lo='lsof -p $(fps) +w'
-alias sgk='ssh-keygen -t rsa -b 4096 -C'
-alias vmware_mnt='sudo vmhgfs-fuse -o allow_other -o auto_unmount .host:/D /mnt/hgfs'
-
