@@ -51,6 +51,10 @@ sudo apt install ccls
 #cpp项目中CMakeLists.txt添加命令生成compile_commands.json在build目录下
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 ```
+| 快捷键 | 功能                     |
+|--------|--------------------------|
+| ctrl j | 函数自动补全后，切换参数 |
+
 ## 安装autojump
 ```sh
 sudo apt install autojump
