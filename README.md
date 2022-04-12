@@ -275,6 +275,7 @@ tmux at -d #简写为tmux a -d
 | Ctrl+b z          | 当前窗格全屏显示，再使用一次会变回原来大小 |
 | Ctrl+b q          | 显示窗格编号                               |
 | Ctrl+b Alt+方向键 | 调整窗格大小                               |
+| Ctrl+b [          | visual模式，可以搜索输出内容               |
 ## 插件管理
 - tmp与tmux-resurrect
 ```shell
