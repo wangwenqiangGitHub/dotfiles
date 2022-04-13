@@ -130,7 +130,7 @@
 		"pp": "pasteFile",
 		"dD": "deleteForever",
 		"a": "addFile",
-		"M": "addDirectory",
+		"A": "addDirectory",
 		"cw": "rename",
 		".": "toggleHidden",
 		"zh": "toggleHidden",
@@ -209,16 +209,16 @@
 			"initializationOptions": {},
 			"settings": {}
 		},
-		"golang": {
-			"command": "gopls",
-			"rootPatterns": ["go.mod"],
-			"filetypes": ["go"],
-			"initializationOptions": {
-				"gocodeCompletionEnabled": true,
-				"diagnosticsEnabled": true,
-				"lintTool": "golint"
-			}
-		},
+		//"golang": {
+		//	"command": "gopls",
+		//	"rootPatterns": ["go.mod"],
+		//	"filetypes": ["go"],
+		//	"initializationOptions": {
+		//		"gocodeCompletionEnabled": true,
+		//		"diagnosticsEnabled": true,
+		//		"lintTool": "golint"
+		//	}
+		//},
 		"bash": {
 			"command": "bash-language-server",
 			"args": ["start"],
