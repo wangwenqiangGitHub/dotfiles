@@ -28,31 +28,29 @@ alias sra='sudo -E ranger'
 alias gs='git status'
 alias ga='git add .'
 alias gc='git commit -m'
-alias gkey='git config credential.helper store'
+alias gS='git config credential.helper store'
 alias gg='git clone'
 alias gp='git push origin master'
 alias git_ignore_file='git update-index --assume-unchanged'
 alias git_cancel_all="git ls-files -v | grep '^h\ ' | awk '{print \$2}' | xargs git update-index --no-assume-unchanged"
 alias git_ls_ignore_file="git ls-files -v | grep '^h\ '| awk '{print \$2}'"
 alias vpn='export http_proxy=http://0.0.0.0:8229'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gb="git branch"
+alias gn='git commit --amend --no-edit'
+alias gpm='git push origin main'
+
+# alias ga="git add -A"
+alias go="git checkout"
+alias gP='git pull'
+# alias gp="git push;git push github"
+# git archive --format zip --output xxx.zip master
 #=======================================================
 # SET 服务器连接
 #=======================================================
-alias s137='ssh root@192.216.20.137'
-alias s136='ssh root@192.216.20.136'
-alias s135='ssh root@192.216.20.135'
-alias s134='ssh root@192.216.20.134'
 
-alias s151='ssh root@192.216.20.151'
-alias s153='ssh root@192.216.20.153'
-
-alias s143='ssh root@192.216.20.143'
-alias s144='ssh root@192.216.20.144'
-alias s145='ssh root@192.216.20.145'
-alias s120='ssh root@192.216.20.120'
-alias s146='ssh root@192.216.20.146'
-alias s186='ssh root@192.216.20.186'
-alias s187='ssh root@192.216.20.187'
+alias s105='ssh root@192.216.223.105'
+alias s107='ssh root@192.216.223.107'
 
 alias srsu='ssh root@172.17.10.2'
 alias s1127='ssh root@10.255.11.27'
@@ -61,13 +59,13 @@ alias wwq='ssh wwq@49.233.53.119'
 # 设置函数
 #=======================================================
 function cpNcs(){
-	scp "$1" root@192.216.20."$2":/system/bin
+	scp "$1" root@192.216.223."$2":/system/bin
 }
 function do-scp(){
-	scp "$1" root@192.216.20."$2":"$3"
+	scp "$1" root@192.216.223."$2":"$3"
 }
 function cpLib(){
-	scp "$1" root@192.216.20."$2":/system/lib
+	scp "$1" root@192.216.223."$2":/system/lib
 }
 function try_until_success(){
 	local i = 1
