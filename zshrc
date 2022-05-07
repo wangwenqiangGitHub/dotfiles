@@ -274,3 +274,11 @@ source ~/.config/zsh/env.zsh
 source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/vi.zsh
 # source ~/.config/zsh/powerlevel9k.zsh
+
+if [ -x $HOME/.config/zsh/z.lua/z.lua ]; then
+    export _ZL_DATA=$HOME/.config/zsh/zluadata
+    export _ZL_ADD_ONCE=1
+    export _ZL_MATCH_MODE=1
+    export _ZL_HYPHEN=1
+    eval "$(lua $HOME/.config/zsh/z.lua/z.lua --init zsh)"
+fi
