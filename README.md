@@ -78,6 +78,9 @@ if [ -x $HOME/.config/zsh/z.lua/z.lua ]; then
     export _ZL_HYPHEN=1
     eval "$(lua $HOME/.config/zsh/z.lua/z.lua --init zsh)"
 fi
+# wsl安装lua
+sudo apt install lua5.3
+sudo apt-get install lua-filesystem
 ```
 ## 安装zsh中的plug
 ```sh
@@ -390,7 +393,6 @@ git commit --amend -no-edit
 - muti-command
 - whichkey
 - vim
-|--------------|------------------|
 | 快捷键       | 说明             |
 |--------------|------------------|
 | space e      | whichkey.show    |
