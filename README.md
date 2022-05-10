@@ -385,3 +385,33 @@ st快捷键
 git add .
 git commit --amend -no-edit
 ```
+# vscode
+- 插件
+- muti-command
+- whichkey
+- vim
+|--------------|------------------|
+| 快捷键       | 说明             |
+|--------------|------------------|
+| space e      | whichkey.show    |
+| a            | 新建文件         |
+| A            | 新建文件夹       |
+| d            | 删除             |
+| r            | 重命名           |
+| o/ enter     | 打开文件         |
+| o/h          | 文件折叠         |
+| space o      | 打开大纲         |
+| ctrl+h       | 窗口切换         |
+| ctrl+c       | 聚焦到主窗口     |
+| ctrl+\       | 打开终端         |
+| ctrl+m       | 最大化           |
+| ctrl+j/h     | 代码补全窗口选择 |
+| <leader>u    | 查看函数的引用   |
+| <space>f     | 查找文件         |
+| <scpace>F    | 查找字           |
+| <leader>+t   | 查找的字跳转过去 |
+| <leader>dj/k | 查找错误         |
+| ctrl+p       | 错误面板         |
+| ctrl shif j  | 错误面板跳转     |
+
+
