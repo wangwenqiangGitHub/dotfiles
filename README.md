@@ -385,3 +385,9 @@ st快捷键
 git add .
 git commit --amend -no-edit
 ```
+# lazygit tips
+| 快捷键 | 说明                 |
+|--------|----------------------|
+| lg     | 打开lazygit          |
+| D      | 删除本地仓文件的修改 |
+
