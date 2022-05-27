@@ -393,6 +393,7 @@ git commit --amend -no-edit
 - muti-command
 - whichkey
 - vim
+
 | 快捷键       | 说明             |
 |--------------|------------------|
 | space e      | whichkey.show    |
@@ -415,5 +416,3 @@ git commit --amend -no-edit
 | <leader>dj/k | 查找错误         |
 | ctrl+p       | 错误面板         |
 | ctrl shif j  | 错误面板跳转     |
-
-
