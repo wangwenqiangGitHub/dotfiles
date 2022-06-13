@@ -126,3 +126,4 @@
   chmod --reference file1 file2  # Makes the permissions the same as file1
 
 - md5sum file
+- top #按H可以查看线程

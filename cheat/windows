@@ -20,3 +20,5 @@
   activate <环境>
   pip install <包名>
 
+- windows快捷键
+  ALT F4 #关闭当前活动窗口
