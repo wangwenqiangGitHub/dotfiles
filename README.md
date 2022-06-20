@@ -62,6 +62,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 | 快捷键 | 功能                     |
 |--------|--------------------------|
 | ctrl j | 函数自动补全后，切换参数 |
+| leader v | 函数列表|
 
 ## 安装autojump
 ```sh
