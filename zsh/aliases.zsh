@@ -41,7 +41,8 @@ alias gn='git commit --amend --no-edit'
 alias gpm='git push origin main'
 
 # alias ga="git add -A"
-alias go="git checkout"
+# 与go命令冲突
+# alias go="git checkout"
 alias gP='git pull'
 # alias gp="git push;git push github"
 # git archive --format zip --output xxx.zip master
