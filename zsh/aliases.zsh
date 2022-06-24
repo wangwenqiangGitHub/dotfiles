@@ -8,6 +8,7 @@ alias ta='tmux attach -t'
 #使用以下方式来解决:tmux at -d #简写为 tmux a -d
 alias td='tmux at -d'
 alias tkw='tmux kill-window -t'
+alias tu="tmux source ~/.tmux.conf.local"
 
 #=======================================================
 # SET shell
@@ -34,7 +35,8 @@ alias gp='git push origin master'
 alias git_ignore_file='git update-index --assume-unchanged'
 alias git_cancel_all="git ls-files -v | grep '^h\ ' | awk '{print \$2}' | xargs git update-index --no-assume-unchanged"
 alias git_ls_ignore_file="git ls-files -v | grep '^h\ '| awk '{print \$2}'"
-alias vpn='export http_proxy=http://0.0.0.0:8229'
+alias vpn_clash='export http_proxy=http://0.0.0.0:7890 && export https_proxy=http://0.0.0.0:7890'
+alias unvpn='unset http_proxy && unset https_proxy'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gb="git branch"
 alias gn='git commit --amend --no-edit'
@@ -44,6 +46,7 @@ alias gpm='git push origin main'
 # 与go命令冲突
 # alias go="git checkout"
 alias gP='git pull'
+alias gg='git config --local user.name wangwenqiangGitHub  && git config --local user.email 1103169969@qq.com'
 # alias gp="git push;git push github"
 # git archive --format zip --output xxx.zip master
 #=======================================================
