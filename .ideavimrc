@@ -30,8 +30,6 @@ noremap <leader>z :wq<cr>
 
 inoremap jj <esc>
 
-noremap <leader>q :q<cr>
-
 " 设置debug为 zd
 nnoremap <leader>d :action Debug<CR>
 " 设置run 为 zr
@@ -52,7 +50,13 @@ nnoremap <leader>y vawy
 nnoremap <leader>p vawp
 "let mapleader=";"
 nnoremap <leader>r :action RunClass<CR>
-"跳转到定义
+nnoremap <leader>B :action Rebuild<CR>
+nnoremap <leader>b :action Build<CR>
+inoremap <c-j> :action EditorDown<CR>
+inoremap <c-l> :action EditorRight<CR>
+inoremap <c-h> :action EditorLeft<CR>
+inoremap <c-k> :action EditorUp<CR>
+
 noremap <leader>gd :action GotoDeclaration<CR>
 nmap <Leader><Leader> V
 vmap <Leader><Leader> <Esc>
@@ -60,10 +64,10 @@ nmap <leader>m %
 
 
 " easy window navigation
-nnoremap <c-l> <c-w>l
-nnoremap <c-j> <c-w>j
-nnoremap <c-h> <c-w>h
-nnoremap <c-k> <c-w>k
+"nnoremap <c-l> <c-w>l
+"nnoremap <c-j> <c-w>j
+"nnoremap <c-h> <c-w>h
+"nnoremap <c-k> <c-w>k
 nnoremap <a-h> gT
 nnoremap <a-l> gt
 nnoremap <c-s-tab> gT
@@ -89,15 +93,20 @@ nnoremap \c :action CheckStyleCurrentFileAction<cr>
 ""https://gist.github.com/zchee/9c78f91cc5ad771c1f5d   zchee/actionlist.vim
 noremap <space>\ :action VimFilePrevious<cr>
 "文件查找
-nnoremap <space>ff :action SearchEverywhere<cr>
+map <space>ff :action SearchEverywhere<cr>
 nnoremap <space>fs :action GotoSymbol<cr>
 nnoremap <space>fa :action GotoAction<cr>
 nnoremap <space>fb :action ToggleLineBreakpoint<cr>
 nnoremap <space>fc   :action GotoClass<cr>
-nnoremap <space>fw :action ReplaceInPath<cr>
+map <space>fw :action ReplaceInPath<cr>
+" 查找单词函数被用到
+nnoremap <space>fr :action FindUsages<cr> 
+map <space>fp :action FindInPath<cr>
 
 nnoremap <space>q! :action CloseProject<cr>
 
+nnoremap <space>zz :action CollapseRegion<cr>
+nnoremap <space>za :action ExpandAllRegions<cr>
 
 “ buffer
 nnoremap <space>e :action Switcher<cr>
@@ -107,6 +116,23 @@ nnoremap <space>fo :action FileStructurePopup<cr>
 noremap [[ <ESC>:action MethodUp<CR>
 " next method
 noremap ]] <ESC>:action MethodDown<CR>
+
+" 窗口切换
+nmap <leader>sh     :action NextSplitter<CR>
+nmap <a-n>          :action NextSplitter<CR>
+nmap <leader>sl     :action PrevSplitter<CR>
+nmap <a-p>          :action PrevSplitter<CR>
+
+nmap <leader>so :action ChangeSplitOrientation<CR>
+nmap <leader>sg :action SplitHorizontally<CR>
+nmap <leader>sv :action SplitVertically<CR>
+nmap <leader>gg :action Git.Menu<CR>
+nmap <leader>gb :action Git.Branches<CR>
+"nmap <leader>b  :action RebuildSolutionAction<CR>
+nmap <leader>ss :action EditorToggleShowGutterIcons<CR>
+
+nmap <leader>sc :action CloseAllEditors<CR>
+nmap <leader>cc :action CloseCurrentEditor<CR>
 
 nnoremap cw ciw
 nnoremap dw daw
