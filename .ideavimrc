@@ -21,6 +21,8 @@ set ignorecase smartcase
 noremap L $
 noremap H ^
 noremap ; :
+" 取消高亮
+noremap <BackSpace> :noh<cr>
 
 " Normal + Visual
 noremap * *zz
@@ -98,10 +100,10 @@ nnoremap <space>fs :action GotoSymbol<cr>
 nnoremap <space>fa :action GotoAction<cr>
 nnoremap <space>fb :action ToggleLineBreakpoint<cr>
 nnoremap <space>fc   :action GotoClass<cr>
-map <space>fw :action ReplaceInPath<cr>
+map <space>fp :action ReplaceInPath<cr>
 " 查找单词函数被用到
 nnoremap <space>fr :action FindUsages<cr> 
-map <space>fp :action FindInPath<cr>
+map <space>fw :action FindInPath<cr>
 
 nnoremap <space>q! :action CloseProject<cr>
 
@@ -123,7 +125,7 @@ nmap <a-n>          :action NextSplitter<CR>
 nmap <leader>sl     :action PrevSplitter<CR>
 nmap <a-p>          :action PrevSplitter<CR>
 
-nmap <leader>so :action ChangeSplitOrientation<CR>
+"nmap <leader>so :action ChangeSplitOrientation<CR>
 nmap <leader>sg :action SplitHorizontally<CR>
 nmap <leader>sv :action SplitVertically<CR>
 nmap <leader>gg :action Git.Menu<CR>
@@ -133,6 +135,8 @@ nmap <leader>ss :action EditorToggleShowGutterIcons<CR>
 
 nmap <leader>sc :action CloseAllEditors<CR>
 nmap <leader>cc :action CloseCurrentEditor<CR>
+
+nnoremap <leader>h :action HideActiveWindow<CR>
 
 nnoremap cw ciw
 nnoremap dw daw
