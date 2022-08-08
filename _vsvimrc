@@ -28,7 +28,7 @@ noremap * *zz
 nmap <Leader><Leader> V
 vmap <Leader><Leader> <Esc>
 
-:nnoremap <BACKSPACE> :noh<cr>
+:nnoremap <bs> :noh<cr>
 :nnoremap <c-o> :vsc View.NavigateBackward<CR>
 :nnoremap <c-i> :vsc View.NavigateForward<CR>
 
@@ -46,3 +46,8 @@ vmap <Leader><Leader> <Esc>
 ":vmap <Leader>fw :vsc VAssistX.FindReferencesResults<CR>
 :vmap <Leader>fw :vsc Edit.FindinFiles<CR>
 "参考https://www.cxyzjd.com/article/yanchezuo/78790961
+"编译
+:nnoremap <Leader>b :vsc Build.Compile<CR>
+ ":nnoremap gb :vsc Build.BuildSolution   "build the solution" 
+ ":nnoremap ge :vsc Debug.StopDebugging   "結束調試"
+ ":nnoremap gs :vsc Debug.Start           "開始調試"
