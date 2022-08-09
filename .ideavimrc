@@ -60,6 +60,10 @@ inoremap <c-h> :action EditorLeft<CR>
 inoremap <c-k> :action EditorUp<CR>
 
 noremap <leader>gd :action GotoDeclaration<CR>
+
+nmap <C-o> <Action>(Back)
+nmap <C-i> <Action>(Forward)
+
 nmap <Leader><Leader> V
 vmap <Leader><Leader> <Esc>
 nmap <leader>m %
@@ -110,7 +114,6 @@ nnoremap <space>q! :action CloseProject<cr>
 nnoremap <space>zz :action CollapseRegion<cr>
 nnoremap <space>za :action ExpandAllRegions<cr>
 
-“ buffer
 nnoremap <space>e :action Switcher<cr>
 "函数列表 <C-F12>
 nnoremap <space>fo :action FileStructurePopup<cr>
@@ -124,6 +127,7 @@ nmap <leader>sh     :action NextSplitter<CR>
 nmap <a-n>          :action NextSplitter<CR>
 nmap <leader>sl     :action PrevSplitter<CR>
 nmap <a-p>          :action PrevSplitter<CR>
+nnoremap <leader>sf :action ToggleFullScreen<CR>
 
 "nmap <leader>so :action ChangeSplitOrientation<CR>
 nmap <leader>sg :action SplitHorizontally<CR>

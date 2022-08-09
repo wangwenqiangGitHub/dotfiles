@@ -31,7 +31,7 @@ vmap <Leader><Leader> <Esc>
 :nnoremap <bs> :noh<cr>
 :nnoremap <c-o> :vsc View.NavigateBackward<CR>
 :nnoremap <c-i> :vsc View.NavigateForward<CR>
-
+:nnoremap gd :vsc Edit.GoToDefinition<CR>>
 "format code
 :nnoremap == :vsc Edit.FormatDocument<CR>
 "查看函数列表 list methods
@@ -51,3 +51,8 @@ vmap <Leader><Leader> <Esc>
  ":nnoremap gb :vsc Build.BuildSolution   "build the solution" 
  ":nnoremap ge :vsc Debug.StopDebugging   "結束調試"
  ":nnoremap gs :vsc Debug.Start           "開始調試"
+ " 窗口管理
+ :nnoremap <Leader>sl :set splitright<CR>:vsplit<CR>
+ :nnoremap <Leader>sh :set nosplitright<CR>:vsplit<CR>
+ :nnoremap <Leader>su :set nosplitbelow<CR>:split<CR>
+ :nnoremap <leader>se :set splitbelow<CR>:split<CR>
