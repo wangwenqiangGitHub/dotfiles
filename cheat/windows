@@ -33,3 +33,5 @@
 	cls # 清除屏幕命令
 	ping
 	ipconfig
+- FFmpeg windows下将桌面流推向服务器
+	ffmpeg -f dshow -i video="USB2.0 PC CAMERA" -pix_fmt yuv420p -s 640x480 -vcodec libx264 -profile baseline -tune zerolatency -g 25 -f rtp rtp://192.168.2.128:56000

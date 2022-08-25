@@ -127,3 +127,10 @@
 
 - md5sum file
 - top #按H可以查看线程
+
+- route:
+  route add default gw 192.216.223.1 dev eth0
+
+- 添加linux源
+  sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa           #添加ppa
+  sudo add-apt-repository  --remove ppa:ubuntu-toolchain-r/ppa #移除ppa
