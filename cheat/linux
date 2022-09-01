@@ -134,3 +134,9 @@
 - 添加linux源
   sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa           #添加ppa
   sudo add-apt-repository  --remove ppa:ubuntu-toolchain-r/ppa #移除ppa
+
+- OpenSSH server
+  sudo service ssh start
+  sudo service ssh stop
+  sudo /etc/init.d/ssh start
+  sudo /etc/init.d/ssh stop
