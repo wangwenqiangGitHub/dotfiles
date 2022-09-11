@@ -11,6 +11,7 @@ sudo apt install nodejs npm
 sudo npm install -g n
 sudo n stable
 sudo apt install global
+sudo apt install ripgrep
 sudo apt install g++ gcc cmake make
 # 安装zsh
 sudo apt install zsh
