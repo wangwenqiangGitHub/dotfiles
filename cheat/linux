@@ -140,3 +140,7 @@
   sudo service ssh stop
   sudo /etc/init.d/ssh start
   sudo /etc/init.d/ssh stop
+
+- test server connection
+  telnet ip port # server端起的端口
+  nc -vz ip port
