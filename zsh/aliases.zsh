@@ -41,7 +41,7 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gb="git branch"
 alias gn='git commit --amend --no-edit'
 alias gpm='git push origin main'
-
+alias ge='git commit --allow-empty-message --allow-empty -m ""'
 # alias ga="git add -A"
 # 与go命令冲突
 # alias go="git checkout"
