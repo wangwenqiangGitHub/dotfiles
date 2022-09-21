@@ -38,3 +38,8 @@
 - ts与mp4相互转换
 	ffmpeg -i 1.mp4 -vcodec copy -acodec copy -vbsf h264_mp4toannexb 1.ts
 	ffmpeg -i 2.ts -acodec copy -vcodec copy -absf aac_adtstoasc output.mp4
+	ffmpeg -i events_1662702830984.ts -acodec copy -vf "scale=640:320"  -absf aac_adtstoasc  24.MP4
+
+
+- LxRunOffline使用
+	LxRunOffline l #查看所有wsl
