@@ -1,0 +1,61 @@
+snippet gcc "arm_linux_gcc4.9"
+set(CMAKE_C_COMPILER /mnt/d/code/r14_ltev2x_app/build/toolchain/gcc-4.9-2016.02-x86_64_arm-linux-gnueabi/bin/arm-linux-gnueabi-gcc)
+set(CMAKE_CXX_COMPILER /mnt/d/code/r14_ltev2x_app/build/toolchain/gcc-4.9-2016.02-x86_64_arm-linux-gnueabi/bin/arm-linux-gnueabi-g++)
+${0}
+endsnippet
+snippet min "cmake_project"
+cmake_minimum_required(VERSION 3.0)
+project(${0})
+${1}
+endsnippet
+
+snippet flag "CMAKE_CXX_FLAGS"
+set(CMAKE_CXX_FLAGS "-std=c++11 -Wall -pthread ")
+set(CMAKE_BUILD_TYPE "Release")
+endsnippet
+
+snippet json "CMAKE_EXPORT_COMPILE_COMMANDS"
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+${0}
+endsnippet
+
+snippet inc "include_directories"
+include_directories(
+	${CMAKE_CURRENT_SOURCE_DIR}
+	${CMAKE_CURRENT_SOURCE_DIR}/../${0}
+	)
+${1}
+endsnippet
+
+snippet lib "link_directories"
+link_directories(
+	${CMAKE_CURRENT_SOURCE_DIR}/../build
+	${0}
+	)
+${1}
+endsnippet
+
+snippet src "source"
+file(GLOB SRC
+	${CMAKE_CURRENT_SOURCE_DIR}/*.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/*.h
+	${CMAKE_CURRENT_SOURCE_DIR}/*/*.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/*/*.c
+	${CMAKE_CURRENT_SOURCE_DIR}/*/*.h
+	${CMAKE_CURRENT_SOURCE_DIR}/*/*.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/*/*/*.c
+	${CMAKE_CURRENT_SOURCE_DIR}/*/*/*.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/*/*/*.h
+	${CMAKE_CURRENT_SOURCE_DIR}/*/*/*.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/*/*/*/*.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/*/*/*/*.c
+	${CMAKE_CURRENT_SOURCE_DIR}/*/*/*/*.h
+	${CMAKE_CURRENT_SOURCE_DIR}/*/*/*/*.hpp)
+endsnippet
+
+snippet exec "add_executable"
+add_executable(${PROJECT_NAME} ${SRC})
+endsnippet
+snippet link "target_link_libraries"
+target_link_libraries("${PROJECT_NAME}" ${0})
+endsnippet

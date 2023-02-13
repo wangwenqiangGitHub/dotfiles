@@ -187,6 +187,9 @@ vmware-hgfsclient
 #查看映射的共享目录 我的是D盘
 #将宿主机共享目录映射在虚拟机中
 sudo vmhgfs-fuse -o allow_other -o auto_unmount.host:/D /mnt/hgfs/D
+#ubuntu
+sudo vmhgfs-fuse -o allow_other .host:/D /mnt/hgfs/D
+
 ```
 # i3 
 ```
