@@ -7,7 +7,7 @@
 # Last Modified: 2022/09/11 13:03:13
 #
 #======================================================================
-sudo apt install nodejs npm
+sudo apt install nodejs npm curl
 sudo npm install -g n
 sudo n stable
 sudo apt install global
@@ -29,5 +29,7 @@ echo $SHELL
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sh -c "$(curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+sed -i '/^plugins=(/cplugins=(git history history-substring-search node npm wd web-search last-working-dir zsh-autosuggestions vi-mode)' .zshrc
+# echo "plugins=(git history history-substring-search node npm wd web-search last-working-dir zsh-autosuggestions vi-mode)" >> .zshrc
 source .zshrc
 sudo apt install bear
