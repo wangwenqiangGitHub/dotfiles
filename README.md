@@ -32,6 +32,7 @@ git push
 ## 使用配置
 - 安装:
 ```sh
+git clone --recursive https://github.com/wangwenqiangGitHub/dotfiles.git ~/.config
 git clone https://github.com/wangwenqiangGitHub/dotfiles.git ~/.vim
 ```
 - link:
