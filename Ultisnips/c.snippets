@@ -5,3 +5,34 @@ endsnippet
 snippet st "printf"
 printf(${0});
 endsnippet
+
+snippet sd "printf"
+printf("<%s %d>\n",__func__, __LINE__);
+${0}
+endsnippet
+
+
+snippet s64 "printf"
+%" PRId64 "${0}
+endsnippet
+
+
+snippet head "printf"
+/*********************************************************************************
+ * @file        `!p snip.rv = fn`
+ * @brief       ${1}
+ * @details     ${2}
+ * @author      wwq
+ * @date        `date +%Y/%m/%d`
+ * @copyright   Copyright (c) `date +%Y` CICTCI V2X Division.
+ * @verbatim
+ *
+ *  Change History:
+ *  Date          Author       Version       Description
+ *  ------------------------------------------------------------------------------
+ *  `date +%Y/%m/%d`     wwq         1.0           Create this file
+ *
+ * @endverbatim
+ ********************************************************************************/
+ ${3}
+endsnippet

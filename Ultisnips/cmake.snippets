@@ -5,8 +5,8 @@ ${0}
 endsnippet
 snippet min "cmake_project"
 cmake_minimum_required(VERSION 3.0)
-project(${0})
-${1}
+project(${1})
+${0}
 endsnippet
 
 snippet flag "CMAKE_CXX_FLAGS"
@@ -53,7 +53,7 @@ file(GLOB SRC
 	${CMAKE_CURRENT_SOURCE_DIR}/*/*/*/*.hpp)
 endsnippet
 
-snippet exec "add_executable"
+snippet exe "add_executable"
 add_executable(${PROJECT_NAME} ${SRC})
 endsnippet
 snippet link "target_link_libraries"
