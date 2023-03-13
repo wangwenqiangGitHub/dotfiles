@@ -44,4 +44,4 @@ endfunc
 
 call Terminal_MetaMode(0)
 
-source ~/.vim/vim-init/init.vim
+source ~/.config/vim-init/init.vim
