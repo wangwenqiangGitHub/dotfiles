@@ -114,3 +114,6 @@ alias g='onefetch'
 #alias ta='tmux a'
 #alias t='tmux'
 #alias lo='lsof -p $(fps) +w'
+
+# vmware
+alias vm='sudo mkdir d && sudo vmhgfs-fuse -o allow_other .host:/D /mnt/hgfs/D'
