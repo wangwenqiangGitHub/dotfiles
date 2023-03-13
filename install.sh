@@ -7,6 +7,7 @@
 # Last Modified: 2022/09/11 13:03:13
 #
 #======================================================================
+sudo apt update
 sudo apt install nodejs npm curl
 sudo npm install -g n
 sudo n stable
@@ -15,7 +16,7 @@ sudo apt install ripgrep
 sudo apt install g++ gcc cmake make
 # 安装zsh
 sudo apt install zsh
-
+sudo apt install openssh-server
 # 查看版本号，检测安装是否成功
 zsh --version
 
