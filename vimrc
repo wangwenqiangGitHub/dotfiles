@@ -1,4 +1,4 @@
-
+source ~/.config/vim-init/init.vim
 "set alt key
 
 function! Terminal_MetaMode(mode)
@@ -44,4 +44,3 @@ endfunc
 
 call Terminal_MetaMode(0)
 
-source ~/.config/vim-init/init.vim
