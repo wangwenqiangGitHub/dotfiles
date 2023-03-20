@@ -116,4 +116,4 @@ alias g='onefetch'
 #alias lo='lsof -p $(fps) +w'
 
 # vmware
-alias vm='sudo mkdir d && sudo vmhgfs-fuse -o allow_other .host:/D /mnt/hgfs/D'
+alias vm='sudo mkdir /mnt/hgfs/D && sudo vmhgfs-fuse -o allow_other .host:/D /mnt/hgfs/D'
