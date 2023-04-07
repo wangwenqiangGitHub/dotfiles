@@ -14,7 +14,7 @@ sudo npm install -g n
 sudo n stable
 sudo apt install global
 sudo apt install ripgrep
-sudo apt install g++ gcc cmake make
+sudo apt install g++ gcc cmake make clangd
 # 安装zsh
 sudo apt install zsh
 sudo apt install openssh-server
