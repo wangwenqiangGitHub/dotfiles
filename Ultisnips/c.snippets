@@ -64,6 +64,73 @@ std::string hexdump(const void *buf, size_t len) {
 	return ret;
 }
 endsnippet
+
+snippet  bt "get trace_stack"
+std::string ss = "get trace_stack";
+afl::util::Exception e(ss.c_str());
+gLogD("%s", e.what());
+gLogD("%s", e.stackTrace());
+${1}
+endsnippet
+
+
+snippet ifndef "#ifndef"
+#ifndef ${1}
+#define ${1}
+${2}
+#endif // ${1}
+endsnippet
+
+
+snippet  btc "get trace_stack"
+#include <execinfo.h>
+void print_stack_trace()
+{
+  int size = 16;
+  void* array[16];
+  int stack_num = backtrace(array, size);
+  char** stacktrace = backtrace_symbols(array, stack_num);
+  for(int i = 0; i < stack_num; ++i)
+  {
+    printf("%s\n", stacktrace[i]);
+  }
+  free(stacktrace);
+}
+${1}
+endsnippet
+
+snippet bth "get trace_stack"
+#include <stdio.h>
+#include <execinfo.h>
+#include <stdlib.h>
+
+#define PRINT_STACK_TRACE() \
+    do { \
+        void *callstack[256]; \
+        int frames = backtrace(callstack, 256); \
+        char **strs = backtrace_symbols(callstack, frames); \
+        for (int i = 0; i < frames; ++i) { \
+            printf("%s\n", strs[i]); \
+        } \
+        free(strs); \
+    } while(0)
+endsnippet
+
+snippet pgd "printf green"
+#define PRINT_GREEN(fmt, ...) printf("\033[32m " fmt "\033[0m", ##__VA_ARGS__)
+endsnippet
+
+snippet pg "printf green"
+printf("\033[32m ${0} \033[0m");
+endsnippet
+
+snippet foreach "Code snippet for range-based for loop (c++11) statement"
+for(auto ${1}: ${2})
+{
+	${3}
+}
+${4}
+endsnippet
 snippet hexmem "hexmem"
 std::string hexmem(const void *buf, size_t len)
 {
