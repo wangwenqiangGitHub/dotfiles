@@ -15,9 +15,18 @@ sudo n stable
 sudo apt install global
 sudo apt install ripgrep
 sudo apt install g++ gcc cmake make clangd
-# 安装zsh
+
+# 安装vim
+sudo apt install vim
+#vim更新到最新版本
+sudo add-apt-repository ppa:jonathonf/vim-daily
+sudo apt update
+sudo apt install vim
+
 sudo apt install zsh
 sudo apt install openssh-server
+sudo apt install bear
+
 # 查看版本号，检测安装是否成功
 zsh --version
 
@@ -36,7 +45,8 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.o
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
-sed -i '/^plugins=(/cplugins=(git history history-substring-search node npm wd web-search last-working-dir zsh-autosuggestions vi-mode)' .zshrc
+# sed -i '/^plugins=(/cplugins=(git history history-substring-search node npm wd web-search last-working-dir zsh-autosuggestions vi-mode)' .zshrc
 # echo "plugins=(git history history-substring-search node npm wd web-search last-working-dir zsh-autosuggestions vi-mode)" >> .zshrc
-source .zshrc
-sudo apt install bear
+ln -s ~/dotfiles/zshrc ~/.zshrc
+ln -s ~/dotfiles/vimrc ~/.vimrc
+source ~/.zshrc
