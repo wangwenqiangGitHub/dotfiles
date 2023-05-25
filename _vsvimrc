@@ -56,3 +56,4 @@ vmap <Leader><Leader> <Esc>
  :nnoremap <Leader>sh :set nosplitright<CR>:vsplit<CR>
  :nnoremap <Leader>su :set nosplitbelow<CR>:split<CR>
  :nnoremap <leader>se :set splitbelow<CR>:split<CR>
+ :nnoremap <leader>v :e C:\Users\戴尔\_vsvimrc<CR>
