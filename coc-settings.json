@@ -73,6 +73,9 @@
 		"$HOME/.config/Ultisnips/",
 		"$HOME/.vim/bundles/vim-snippets/UltiSnips/"
 	],
+	"snippets.extends": {
+		"cpp":["app","utils"]
+	},
 	"coc.preferences.formatOnSaveFiletypes": [
 		"javascript",
 		"typescript",
@@ -110,19 +113,25 @@
 	"explorer.keyMappingMode": "none",
 	"explorer.buffer.showHiddenBuffers": false,
 	"explorer.keyMappings.global": {
-		"u": "nodePrev",
+		"h": ["wait", "collapse"],
+		"l": ["wait", "expandable?", "expand", "open"],
+		"u": "gotoParent",
 		"e": "open",
 		"s": "toggleSelection",
 		"<tab>": "actionMenu",
-		"gl": "expandRecursive",
-		"gh": "collapseRecursive",
+		"gl": ["wait", "expand:recursive"],
+		"gh": ["wait", "collapse:recursive"],
+		"<2-LeftMouse>": [
+			"expandable?",
+			["expanded?", "collapse", "expand"],
+			"open"
+		],
 		"i": ["wait", "expandable?", "expand", "open"],
 		"<cr>": ["wait", "expandable?", "cd", "open"],
 		"I": "open:vsplit",
 		"o": ["wait", "expanded?", "collapse", "expand"],
 		"O": "open:tab",
 		"n": "collapse",
-		"gp": "gotoParent",
 		"yp": "copyFilepath",
 		"yn": "copyFilename",
 		"yy": "copyFile",
@@ -131,7 +140,7 @@
 		"dD": "deleteForever",
 		"a": "addFile",
 		"A": "addDirectory",
-		"cw": "rename",
+		"r": "rename",
 		".": "toggleHidden",
 		"zh": "toggleHidden",
 		"R": "refresh",
