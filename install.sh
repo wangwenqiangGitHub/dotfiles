@@ -7,6 +7,30 @@
 # Last Modified: 2022/09/11 13:03:13
 #
 #======================================================================
+install_ccls_from_source() {
+	if which ccls 2> /dev/null && ccls --version; then
+		echo '-- ccls already installed, skipping...'
+	else
+		if ! [ -d .vim/ccls ]; then
+			echo '-- Cloning ccls source code from GitHub (please wait)...'
+			mkdir -p /tmp/ccls-work.$$
+			pushd /tmp/ccls-work.$$
+			git clone https://github.com/MaskRay/ccls.git --depth=1 --recursive
+			popd
+			mv /tmp/ccls-work.$$/ccls .vim/
+		fi
+		cd .vim/ccls
+		rm -rf /tmp/ccls-build.$$
+		echo '-- Building ccls from source...'
+		cmake -B /tmp/ccls-build.$$ -DCMAKE_BUILD_TYPE=Release
+		cmake --build /tmp/ccls-build.$$ --config Release --parallel `grep -c ^processor /proc/cpuinfo || echo 1`
+		sudo cmake --build /tmp/ccls-build.$$ --config Release --target install
+		echo '-- Installed ccls successfully'
+		rm -rf /tmp/ccls-build.$$
+		cd ../..
+	fi
+}
+
 sudo apt update
 sudo apt install net-tools
 sudo apt install nodejs npm curl
@@ -50,3 +74,7 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/vimrc ~/.vimrc
 source ~/.zshrc
+sudo apt install bear
+mkdir -p ~/.config/coc/extensions/node_modules/coc-ccls
+ln -sf node_modules/ws/lib ~/.config/coc/extensions/node_modules/coc-ccls/lib
+install_ccls_from_source
