@@ -54,10 +54,10 @@ nnoremap <leader>p vawp
 nnoremap <leader>r :action RunClass<CR>
 nnoremap <leader>B :action Rebuild<CR>
 nnoremap <leader>b :action Build<CR>
-inoremap <c-j> :action EditorDown<CR>
-inoremap <c-l> :action EditorRight<CR>
-inoremap <c-h> :action EditorLeft<CR>
-inoremap <c-k> :action EditorUp<CR>
+inoremap <c-j> <esc>:action EditorDown<CR>a
+inoremap <c-l> <esc>:action EditorRight<CR>a
+inoremap <c-h> <esc>:action EditorLeft<CR>a
+inoremap <c-k> <esc>:action EditorUp<CR>a
 
 noremap <leader>gd :action GotoDeclaration<CR>
 
