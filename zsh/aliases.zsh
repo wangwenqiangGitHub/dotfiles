@@ -49,6 +49,7 @@ alias glf='gl --follow -p'
 # alias go="git checkout"
 alias gP='git pull'
 alias gg='git config --local user.name wangwenqiangGitHub  && git config --local user.email 1103169969@qq.com'
+alias gh='git config --add oh-my-zsh.hide-dirty 1'
 # alias gp="git push;git push github"
 # git archive --format zip --output xxx.zip master
 #=======================================================
@@ -119,3 +120,15 @@ alias g='onefetch'
 
 # vmware
 alias vm='sudo mkdir /mnt/hgfs/D && sudo vmhgfs-fuse -o allow_other .host:/D /mnt/hgfs/D'
+#======================================================================
+# 工作
+#======================================================================
+function tarapp(){
+	tar zcvf $1.tar.gz --exclude=$1/CMakeLists.txt --exclude=$1/Debug --exclude=$1/.settings --exclude=$1/.cproject --exclude=$1/.project --exclude=$1/local.Mk $1
+}
+
+function cheatsheets(){
+	cd ~/awesome-cheatsheets && grep -r "$1" .
+}
+
+alias grep_from_file='grep -r "list" . --include=CMakeLists.txt'
