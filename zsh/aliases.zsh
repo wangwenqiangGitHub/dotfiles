@@ -132,3 +132,17 @@ function cheatsheets(){
 }
 
 alias grep_from_file='grep -r "list" . --include=CMakeLists.txt'
+
+function gro() {
+    local git_root
+    git_root=$(git rev-parse --show-toplevel 2>/dev/null)
+    if [[ $? -eq 0 && -d $git_root ]]; then
+        cd "$git_root"
+    else
+        echo "Not in a git repository or could not find the git root."
+    fi
+}
+
+function subuntu137(){
+	smbclient //192.168.208.136/ubuntu -U kingwq%1 -c "${1} ${2} ${2}"
+}
