@@ -13,6 +13,12 @@ inoremap jj <Esc>
 
 eclipseaction eclipseopenresource org.eclipse.ui.navigate.openResource
 nnoremap <leader>ff :eclipseopenresource<cr>
+eclipseaction eclipsecmdsearch org.eclipse.search.ui.openSearchDialog
+nnoremap <leader>fw :eclipsecmdsearch<cr>
+vnoremap <leader>fw :eclipsecmdsearch<cr>
+eclipseaction eclipsecmdhierarchy org.eclipse.jdt.ui.edit.text.java.open.call.hierarchy
+nnoremap <leader>fh :eclipsecmdhierarchy<cr>
+vnoremap <leader>fh :eclipsecmdhierarchy<cr>
 
 noremap <leader>s :w<cr>
 
