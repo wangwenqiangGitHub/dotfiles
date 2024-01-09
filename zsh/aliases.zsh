@@ -146,3 +146,4 @@ function gro() {
 function subuntu137(){
 	smbclient //192.168.208.136/ubuntu -U kingwq%1 -c "${1} ${2} ${2}"
 }
+
