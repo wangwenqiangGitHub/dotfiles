@@ -58,6 +58,7 @@
 	"diagnostic.virtualTextPrefix": " ❯❯❯ ",
 	"diagnostic.virtualText": true,
 	"clangd.disableDiagnostics": true,
+	"inlayHint.enable": false,
 	//"clangd.path":"",
 	//"clangd.arguments": ["--background-index", "--log=verbose", "--query-driver=/../usr/bin/aarch64-poky-linux/aarch64-poky-linux-g++"]
 	"codeLens.enable": true,
