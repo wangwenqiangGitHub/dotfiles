@@ -50,6 +50,7 @@ sudo apt install vim
 sudo apt install zsh
 sudo apt install openssh-server
 sudo apt install bear
+sudo apt install libbz2-dev p7zip-full rar
 
 # 查看版本号，检测安装是否成功
 zsh --version
