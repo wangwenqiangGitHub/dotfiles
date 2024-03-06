@@ -33,7 +33,8 @@ install_ccls_from_source() {
 
 sudo apt update
 sudo apt install net-tools
-sudo apt install nodejs npm curl
+# 从官网https://nodejs.org/en/download/下载bin文件
+#sudo apt install nodejs npm curl
 sudo npm install -g n
 sudo n stable
 sudo apt install global
