@@ -189,3 +189,9 @@ else
 	echo "usage: q-compress <foo.tar.gz> ./foo ./bar"
 fi
 }
+
+function ct() {
+	# find ${1} -type f \( -iname "*.h" -o -iname "*.cpp" \) -print0 | xargs -0 wc -l | grep '总计'
+	# find ${1} -type f \( -iname "*.h" -o -iname "*.cpp" \) -exec wc -l {} +
+	find ${1} -type f \( -iname "*.h" -o -iname "*.cpp" \) -print0 | xargs -0 wc -l
+}
