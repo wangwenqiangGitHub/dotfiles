@@ -80,3 +80,6 @@ sudo apt install bear
 mkdir -p ~/.config/coc/extensions/node_modules/coc-ccls
 ln -sf node_modules/ws/lib ~/.config/coc/extensions/node_modules/coc-ccls/lib
 install_ccls_from_source
+
+cp ~/dotfiles/coc-settings.json ~/.vim
+cp ~/dotfiles/task_template.ini ~/.vim
