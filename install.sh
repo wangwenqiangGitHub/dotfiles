@@ -35,11 +35,13 @@ sudo apt update
 sudo apt install net-tools
 # 从官网https://nodejs.org/en/download/下载bin文件
 #sudo apt install nodejs npm curl
-sudo npm install -g n
-sudo n stable
+# sudo npm install -g n
+# sudo n stable
 sudo apt install global
 sudo apt install ripgrep
-sudo apt install g++ gcc cmake make clangd
+sudo apt install g++ gcc cmake make #clangd
+# clangd手动安装地址
+#https://github.com/clangd/clangd/releases/tag/17.0.3
 
 # 安装vim
 sudo apt install vim
@@ -52,6 +54,9 @@ sudo apt install zsh
 sudo apt install openssh-server
 sudo apt install bear
 sudo apt install libbz2-dev p7zip-full rar
+sudo apt install universal-ctags
+sudo apt install lua5.4
+sudo apt install sshpass
 
 # 查看版本号，检测安装是否成功
 zsh --version
@@ -70,7 +75,7 @@ sh -c "$(curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/in
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-
+git clone https://github.com/skywind3000/z.lua.git ~/.config/zsh/z.lua
 # sed -i '/^plugins=(/cplugins=(git history history-substring-search node npm wd web-search last-working-dir zsh-autosuggestions vi-mode)' .zshrc
 # echo "plugins=(git history history-substring-search node npm wd web-search last-working-dir zsh-autosuggestions vi-mode)" >> .zshrc
 ln -s ~/dotfiles/zshrc ~/.zshrc
