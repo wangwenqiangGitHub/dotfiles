@@ -132,7 +132,7 @@
 		"I": "open:vsplit",
 		"o": ["wait", "expanded?", "collapse", "expand"],
 		"O": "open:tab",
-		"n": "collapse",
+		//"n": "collapse",
 		"yp": "copyFilepath",
 		"yn": "copyFilename",
 		"yy": "copyFile",
