@@ -40,6 +40,8 @@ sudo apt install net-tools
 sudo apt install global
 sudo apt install ripgrep
 sudo apt install g++ gcc cmake make #clangd
+# gcc build flash -m32
+sudo apt-get install gcc-multilib g++-multilib
 # clangd手动安装地址
 #https://github.com/clangd/clangd/releases/tag/17.0.3
 
