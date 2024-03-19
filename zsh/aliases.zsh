@@ -151,6 +151,10 @@ function sfcom(){
 	 minicom -D /dev/ttyS${1} -R gb2312
 }
 
+function sfvx () {
+	minicom -b 9600 -D /dev/ttyS${1} -R gbk
+}
+
 function q-extract() {
 if [ -f $1 ] ; then
 	case $1 in
@@ -195,3 +199,7 @@ function ct() {
 	# find ${1} -type f \( -iname "*.h" -o -iname "*.cpp" \) -exec wc -l {} +
 	find ${1} -type f \( -iname "*.h" -o -iname "*.cpp" \) -print0 | xargs -0 wc -l
 }
+
+alias open='explorer.exe'
+alias p='pwd'
+alias sy='source ~/.zshrc'
