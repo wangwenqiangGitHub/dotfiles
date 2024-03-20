@@ -29,9 +29,10 @@ nmap <Leader><Leader> V
 vmap <Leader><Leader> <Esc>
 
 :nnoremap <bs> :noh<cr>
+"c-o c-i 不生效需要在[工具]-[选项]-[VsVim]-按键"
 :nnoremap <c-o> :vsc View.NavigateBackward<CR>
 :nnoremap <c-i> :vsc View.NavigateForward<CR>
-:nnoremap gd :vsc Edit.GoToDefinition<CR>>
+:nnoremap gd :vsc Edit.GoToDefinition<CR>
 "format code
 :nnoremap == :vsc Edit.FormatDocument<CR>
 "查看函数列表 list methods
@@ -47,13 +48,16 @@ vmap <Leader><Leader> <Esc>
 :vmap <Leader>fw :vsc Edit.FindinFiles<CR>
 "参考https://www.cxyzjd.com/article/yanchezuo/78790961
 "编译
-:nnoremap <Leader>b :vsc Build.Compile<CR>
+:nnoremap <Leader>fd :vsc Build.Compile<CR>
  ":nnoremap gb :vsc Build.BuildSolution   "build the solution" 
- ":nnoremap ge :vsc Debug.StopDebugging   "結束調試"
- ":nnoremap gs :vsc Debug.Start           "開始調試"
+:nnoremap <Leader>fe :vsc Debug.StopDebugging<CR>   "結束調試"
+:nnoremap <Leader>fr :vsc Debug.Start<CR>         "開始調試"
+:nnoremap <Leader>ft :vsc VAssistX.RefactorRename<CR>     " 重命名"
+:nnoremap <Leader>fn :vsc VAssistX.RefactorCreateFile<CR> " 创建文件"
  " 窗口管理
- :nnoremap <Leader>sl :set splitright<CR>:vsplit<CR>
- :nnoremap <Leader>sh :set nosplitright<CR>:vsplit<CR>
- :nnoremap <Leader>su :set nosplitbelow<CR>:split<CR>
- :nnoremap <leader>se :set splitbelow<CR>:split<CR>
- :nnoremap <leader>v :e C:\Users\戴尔\_vsvimrc<CR>
+:nnoremap <Leader>sl :set splitright<CR>:vsplit<CR>
+:nnoremap <Leader>sh :set nosplitright<CR>:vsplit<CR>
+:nnoremap <Leader>su :set nosplitbelow<CR>:split<CR>
+:nnoremap <leader>se :set splitbelow<CR>:split<CR>
+:nnoremap <leader>fv :e C:\Users\wangwenqiang01\_vsvimrc<CR>
+:nnoremap <leader>fs :so C:\Users\wangwenqiang01\_vsvimrc<CR>
