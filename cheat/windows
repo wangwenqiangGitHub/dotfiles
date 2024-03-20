@@ -11,6 +11,7 @@
   control.exe：#控制面版
   mspaint：#画图
   mstsc.exe #远程桌面
+  taskkill /f /im wslservice.exe
 
 - conda
   # 管理员权限 网络正常
