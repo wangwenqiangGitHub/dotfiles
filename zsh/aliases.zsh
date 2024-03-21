@@ -200,6 +200,15 @@ function ct() {
 	find ${1} -type f \( -iname "*.h" -o -iname "*.cpp" \) -print0 | xargs -0 wc -l
 }
 
+function func() {
+	nm ${$1} | grep ' T '
+}
+
+function lk() {
+	objdump -p ${1}
+}
+
 alias open='explorer.exe'
 alias p='pwd'
 alias sy='source ~/.zshrc'
+
