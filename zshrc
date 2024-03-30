@@ -265,7 +265,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-. /usr/share/autojump/autojump.sh
+# . /usr/share/autojump/autojump.sh
 
 export DOCKER_HOST=tcp://localhost:2375
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
