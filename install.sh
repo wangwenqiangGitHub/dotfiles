@@ -60,6 +60,20 @@ sudo apt install universal-ctags
 sudo apt install lua5.4
 sudo apt install sshpass
 
+ln -s ~/dotfiles/zshrc ~/.zshrc
+ln -s ~/dotfiles/vimrc ~/.vimrc
+source ~/.zshrc
+sudo apt install bear
+mkdir -p ~/.config/coc/extensions/node_modules/coc-ccls
+ln -sf node_modules/ws/lib ~/.config/coc/extensions/node_modules/coc-ccls/lib
+install_ccls_from_source
+
+# coc
+cp ~/dotfiles/coc-settings.json ~/.vim
+cp ~/dotfiles/task_template.ini ~/.vim
+npm i -g bash-language-server
+# dprint工具
+curl -fsSL https://dprint.dev/install.sh | sh
 # 查看版本号，检测安装是否成功
 zsh --version
 
@@ -80,13 +94,3 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 git clone https://github.com/skywind3000/z.lua.git ~/.config/zsh/z.lua
 # sed -i '/^plugins=(/cplugins=(git history history-substring-search node npm wd web-search last-working-dir zsh-autosuggestions vi-mode)' .zshrc
 # echo "plugins=(git history history-substring-search node npm wd web-search last-working-dir zsh-autosuggestions vi-mode)" >> .zshrc
-ln -s ~/dotfiles/zshrc ~/.zshrc
-ln -s ~/dotfiles/vimrc ~/.vimrc
-source ~/.zshrc
-sudo apt install bear
-mkdir -p ~/.config/coc/extensions/node_modules/coc-ccls
-ln -sf node_modules/ws/lib ~/.config/coc/extensions/node_modules/coc-ccls/lib
-install_ccls_from_source
-
-cp ~/dotfiles/coc-settings.json ~/.vim
-cp ~/dotfiles/task_template.ini ~/.vim
