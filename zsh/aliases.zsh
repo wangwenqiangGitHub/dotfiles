@@ -212,3 +212,6 @@ alias open='explorer.exe'
 alias p='pwd'
 alias sy='source ~/.zshrc'
 
+# [wsl]
+alias onc='control.exe /name Microsoft.NetworkAndSharingCenter'
+# devmgmt.msc
