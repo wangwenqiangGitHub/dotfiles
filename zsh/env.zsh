@@ -65,3 +65,6 @@ export PATH=$PATH:/home/kingwq/.local/bin
 #export ZSH_AUTOSUGGEST_USE_ASYNC=1
 #export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 export DEFAULT_CHEAT_DIR=$HOME/dotfiles/cheat/
+# dprint
+export DPRINT_INSTALL="$HOME/.dprint"
+export PATH="$DPRINT_INSTALL/bin:$PATH"
