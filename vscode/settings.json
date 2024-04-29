@@ -554,5 +554,6 @@
 	// "workbench.iconTheme": "vscode-icons",
 	"workbench.list.automaticKeyboardNavigation": false,
 	"workbench.panel.defaultLocation": "right",
-	"workbench.startupEditor": "newUntitledFile"
+	"workbench.startupEditor": "newUntitledFile",
+	"editor.inlayHints.enabled": "off"
 }
