@@ -1,5 +1,7 @@
 {
-	"window.zoomLevel": 2,
+	"files.encoding": "gb2312",
+	"terminal.integrated.mouseWheelZoom": true,
+	"editor.mouseWheelZoom": true,
 	"vim.insertModeKeyBindings": [
 		{
 			"before": [
@@ -11,26 +13,17 @@
 			]
 		},
 	],
-	"vim.visualModeKeyBindings": [],
-	// "vim.leader": " ",
-	"tabnine.experimentalAutoImports": true,
-	"[vue]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
+	"vim.leader": " ",
 	"editor.formatOnSave": true,
 	"workbench.colorTheme": "Monokai Pro (Filter Machine)",
 	"workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
 	"editor.quickSuggestions": {
-        "other": "on",
-        "comments": "off",
-        "strings": "on"
-    }
-	
-    // 参考
-    	"[c]": {
+		"other": "on",
+		"comments": "off",
+		"strings": "on"
+	},
+	// 参考
+	"[c]": {
 		"editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
 	},
 	"[cpp]": {
@@ -53,14 +46,6 @@
 		"editor.insertSpaces": true,
 		"editor.tabSize": 4
 	},
-	"C_Cpp.autocompleteAddParentheses": true,
-	"C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google}",
-	"C_Cpp.formatting": "Default",
-	"C_Cpp.intelliSenseEngine": "Disabled",
-	"C_Cpp.intelliSenseEngineFallback": "Disabled",
-	"C_Cpp.vcFormat.indent.braces": true,
-	"C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
-	"clang-format.executable": "",
 	"clangd.arguments": [
 		// "--compile-commands-dir=${workspaceFolder}/build", // compile data base path
 		"--query-driver=/usr/bin/clang-*,/usr/bin/g++-*",
@@ -82,17 +67,9 @@
 		"--pretty"
 		// 建议排序模型
 	],
-	"cmake.build.workspaceTargets": [],
-	"cmake.buildDirectory": "${workspaceFolder}/cmake-build",
-	"cmake.configureOnOpen": true,
-	"cmake.copyCompileCommands": "${workspaceFolder}/build/compile_commands.json",
-	"cmake.cpptools.intelliSenseMode": "gcc-x64",
-	"cmake.default.buildDirectory": "${workspaceFolder}/cmake-build",
 	"debug.console.fontSize": 16,
 	"diffEditor.maxComputationTime": 0,
 	"diffEditor.wordWrap": "off",
-	"doxdocgen.generic.authorEmail": "zhang.xingrui@foxmail.com",
-	"doxdocgen.generic.authorName": "raven",
 	"editor.cursorSurroundingLines": 8,
 	"editor.cursorBlinking": "solid",
 	"editor.cursorStyle": "line",
@@ -104,21 +81,13 @@
 	"editor.largeFileOptimizations": false,
 	"editor.lineNumbers": "on",
 	"editor.minimap.enabled": false,
-	"editor.mouseWheelZoom": false,
 	"editor.renderWhitespace": "boundary",
 	"editor.snippetSuggestions": "bottom",
 	"editor.suggestSelection": "first",
 	"editor.tabCompletion": "on",
 	"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-	"errorLens.enabled": true,
-	"errorLens.enabledDiagnosticLevels": [
-		"error",
-		"warning"
-	],
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
-	"fileheader.Author": "zhang.xingrui",
-	"fileheader.LastModifiedBy": "zhang.xingrui",
 	"files.autoGuessEncoding": true,
 	"files.autoSave": "onFocusChange",
 	"files.eol": "\n",
@@ -130,30 +99,7 @@
 	},
 	"git.autofetch": true,
 	"git.suggestSmartCommit": false,
-	"github.copilot.enable": {
-		"*": true,
-		"c": true,
-		"cpp": true,
-		"go": true,
-		"markdown": false,
-		"plaintext": false,
-		"yaml": false
-	},
-	"go.autocompleteUnimportedPackages": true,
-	"go.buildOnSave": "off",
-	"go.coverageOptions": "showCoveredCodeOnly",
-	"go.toolsManagement.autoUpdate": true,
 	"http.proxySupport": "off",
-	"prettier.tabWidth": 4,
-	"python.languageServer": "Default",
-	"python.terminal.activateEnvironment": false,
-	"remote.SSH.configFile": "~/.ssh/config",
-	"remote.SSH.remotePlatform": {
-		"192.168.3.26": "linux",
-		"192.168.209.128": "linux",
-		"cxy": "linux",
-		"ubuntu18": "linux"
-	},
 	"remote.SSH.showLoginTerminal": true,
 	"remote.SSH.useLocalServer": false,
 	"scss.lint.duplicateProperties": "warning",
@@ -223,26 +169,153 @@
 	"vim.normalModeKeyBindings": [
 		{ // which key
 			"before": [
-				"<space>"
+				"<tab>"
 			],
 			"commands": [
 				"whichkey.show"
 			]
 		},
+		{
+			"before": [
+				"<leader>",
+				"<leader>"
+			],
+			"after": [
+				"V"
+			]
+		},
+		{
+			"before": [
+				";"
+			],
+			"after": [
+				":"
+			]
+		},
+		// 全局搜索文件名
+		{
+			"before": [
+				"<leader>",
+				"f",
+				"f"
+			],
+			"commands": [
+				"workbench.action.quickOpen"
+			]
+		},
+		// 全局搜索文字
+		{
+			"before": [
+				"<leader>",
+				"f",
+				"w"
+			],
+			"commands": [
+				"workbench.action.findInFiles"
+			]
+		},
+	// 格式化代码
+		{
+		"before": ["<leader>", "f", "m"],
+		"commands": ["editor.action.formatDocument"]
+		},
+		// 变量符号重命名
+		{
+		"before": ["<leader>", "f", "r"],
+		"commands": ["editor.action.rename"]
+		},
+		// 定义速览
+		{
+		"before": ["<leader>","f","v"],
+		"commands": ["editor.action.showHover"]
+		},
+		// 转到定义
+		// {
+		// "before": ["g", "d"],
+		// "commands": ["editor.action.revealDefinition"]
+		// },
+		// 转到引用
+		// {
+		// "before": ["g", "r"],
+		// "commands": ["editor.action.goToReferences"]
+		// },
+		// 转到实现
+		// {
+		// "before": ["g", "i"],
+		// "commands": ["editor.action.goToImplementation"]
+		// },
+		// 回退到上一个位置
+		{
+		"before": ["g", "b"],
+		"commands": ["workbench.action.navigateBack"]
+		},
+		   // 切换最左侧图标面板可见性
     {
-        "before":[ "<leader>", "<leader>" ],
-        "after":[ "V" ]
+      "before": ["<leader>", "s", "a"],
+      "commands": ["workbench.action.toggleActivityBarVisibility"]
     },
+    // 打开文件浏览器
     {
-        "before":[ ";" ],
-        "after":[ ":" ]
-    }
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    // 关闭当前标签页
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    // 退出 vscode
+    {
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.closeWindow"]
+    },
+    // 保存文件
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    // 组中上一个标签页
+    {
+      "before": ["H"],
+      "commands": ["workbench.action.previousEditorInGroup"]
+    },
+    // 组中下一个标签页
+    {
+      "before": ["L"],
+      "commands": ["workbench.action.nextEditorInGroup"]
+    },
+    // 关闭标签组
+    {
+      "before": ["<leader>", "g", "c"],
+      "commands": ["workbench.action.closeEditorsInGroup"]
+    },
+    // 移动到上一个标签组
+    {
+      "before": ["<leader>", "H"],
+      "commands": ["workbench.action.moveEditorToPreviousGroup"]
+    },
+    // 移动到下一个标签组
+    {
+      "before": ["<leader>", "L"],
+      "commands": ["workbench.action.moveEditorToNextGroup"]
+    },
+    // 全部折叠
+    {
+      "before": ["<leader>", "z", "c"],
+      "commands": ["editor.foldAll"]
+    },
+    // 全部展开
+    {
+      "before": ["<leader>", "z", "o"],
+      "commands": ["editor.unfoldAll"]
+    },
 	],
 	"vim.normalModeKeyBindingsNonRecursive": [
 		{
 			"before": [
 				"<leader>",
-				"f"
+				"f",
+				"t"
 			],
 			"commands": [
 				"editor.action.formatDocument"
@@ -409,7 +482,8 @@
 	"vim.visualModeKeyBindings": [
 		{ // which key
 			"before": [
-				"<space>"
+				// "<space>"
+				"<tab>"
 			],
 			"commands": [
 				"whichkey.show"
@@ -432,21 +506,33 @@
 				"editor.action.outdentLines"
 			]
 		},
-	{
-		"before": [
-			"<leader>",
-			"<leader>"
-		],
-		"after": [
-			"<esc>"
-		]
-    }
+		{
+			"before": [
+				"<leader>",
+				"<leader>"
+			],
+			"after": [
+				"<esc>"
+			]
+		},
+		// 全局搜索文字
+		{
+			"before": [
+				"<leader>",
+				"f",
+				"w"
+			],
+			"commands": [
+				"workbench.action.findInFiles"
+			]
+		},
 	],
 	"vim.visualModeKeyBindingsNonRecursive": [
 		{
 			"before": [
 				"<leader>",
-				"f"
+				"f",
+				"t"
 			],
 			"commands": [
 				"editor.action.formatSelection"
@@ -549,11 +635,12 @@
 			"type": "command"
 		},
 	],
+	// "workbench.list.automaticKeyboardNavigation": false,
+	// "workbench.panel.defaultLocation": "bottom",
+	// "workbench.panel.opensMaximized": "always",
+	"workbench.startupEditor": "newUntitledFile",
+	"editor.inlayHints.enabled": "off"
 	// "window.zoomLevel": -1,
 	// "workbench.colorTheme": "Catppuccin",
 	// "workbench.iconTheme": "vscode-icons",
-	"workbench.list.automaticKeyboardNavigation": false,
-	"workbench.panel.defaultLocation": "right",
-	"workbench.startupEditor": "newUntitledFile",
-	"editor.inlayHints.enabled": "off"
 }
