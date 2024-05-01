@@ -175,6 +175,57 @@
 				"whichkey.show"
 			]
 		},
+		// 直接跳到搜索的的pane
+		{
+			"before": [
+				"<leader>",
+				"f",
+				"l"
+			],
+			"commands": [
+				"search.action.focusSearchList"
+			]
+		},
+		  {
+            "before": [
+                "<leader>",
+                "t",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.terminal.focus"
+            ]
+        },
+		 {
+            "before": [
+                "<leader>",
+				"f",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.switchWindow"
+            ]
+        },
+       // {
+       //     "before": [
+       //         "<leader>",
+       //         "b",
+       //         "t"
+       //     ],
+       //     "commands": [
+       //         "bookmarks.toggle"
+       //     ]
+       // },
+		//{
+       //     "before": [
+       //         "<leader>",
+       //         "b",
+       //         "l"
+       //     ],
+       //     "commands": [
+       //         "bookmarks.list"
+       //     ]
+       // },
 		{
 			"before": [
 				"<leader>",
