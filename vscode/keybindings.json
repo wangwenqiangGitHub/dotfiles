@@ -1,3 +1,4 @@
+// Place your key bindings in this file to override the defaults
 [
 	{
 		"key": "a",
@@ -198,4 +199,13 @@
 		"key": "ctrl+r",
 		"command": "workbench.action.reloadWindow"
 	},
+	{
+        "key": "ctrl+k",
+        "command": "search.action.focusSearchList",
+        // "when": "searchViewletVisible"
+    },
+    // {
+    //     "key": "cmd+j",
+    //     "command": "-workbench.action.togglePanel"
+    // },       "
 ]
