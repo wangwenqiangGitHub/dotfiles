@@ -204,8 +204,12 @@
         "command": "search.action.focusSearchList",
         // "when": "searchViewletVisible"
     },
-    // {
-    //     "key": "cmd+j",
-    //     "command": "-workbench.action.togglePanel"
-    // },       "
+    {
+        "key": "crtl+j",
+        "command": "-workbench.action.togglePanel"
+    },
+	{
+		"key": "crtl+j",
+		"command": "outline.focus"
+	}
 ]

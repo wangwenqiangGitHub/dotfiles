@@ -152,7 +152,7 @@
 	"vim.useCtrlKeys": false,
 	"vim.useSystemClipboard": true,
 	"vim.vimrc.enable": true,
-	"vim.vimrc.path": "$HOME/.vsvimrc",
+	"vim.vimrc.path": "c:\\Users\\wangwenqiang01\\.vsvimrc",
 	"vim.handleKeys": {
 		"<C-a>": false,
 		"<C-f>": false,
@@ -360,6 +360,40 @@
       "before": ["<leader>", "z", "o"],
       "commands": ["editor.unfoldAll"]
     },
+	
+ {
+        "before": ["%"],
+        "commands": ["extension.matchitJumpItems"]
+      },
+      {
+        "before": ["<leader>","x", "x"],
+        "commands": ["editor.action.smartSelect.expand"]
+      },
+      {
+        "before": ["<leader>","z", "z"],
+        "commands": ["editor.action.smartSelect.shrink"]
+      },
+      {
+        "before": ["<leader>","c", "i"],
+        "commands": ["editor.action.commentLine"]
+      },
+    //   {
+    //     "before": ["<leader", "a", "a"],
+    //     "commands": ["editor.action.clipboardCopyAction"]
+    //   },
+      {
+        "before": ["<leader>","q", "q"],
+        "commands": ["workbench.action.findInFiles"]
+      },
+      {
+        "before": ["<leader>","s", "s"],
+        "commands": ["actions.find"]
+      },
+	  {
+		"before": ["<leader>", "a", "a"],
+		// "command": "C_Cpp.SwitchHeaderSource"
+		"command": ["clangd.switchheadersource"]
+	  }
 	],
 	"vim.normalModeKeyBindingsNonRecursive": [
 		{
@@ -529,6 +563,139 @@
 				"editor.action.rename",
 			]
 		},
+		// new add
+      {
+        "before": ["<leader>","r", "v"],
+        "commands": ["editor.action.rename"]
+      },
+      {
+        "before": ["<leader>","q", "q"],
+        "commands": ["workbench.action.findInFiles"]
+      },
+      {
+        "before": ["<leader>","f", "p"],
+        "commands": ["workbench.action.files.copyPathOfActiveFile"]
+      },
+      {
+        "before": ["<leader>","f", "n"],
+        "commands": ["copyRelativeFilePath"]
+      },
+      {
+        "before": ["<leader>","t", "p"],
+        "commands": ["workbench.action.togglePanel"]
+      },
+      {
+        "before": ["<leader>","x", "m"],
+        "commands": ["workbench.action.showCommands"]
+      },
+      {
+        "before": ["<leader>","c", "i"],
+        "commands": ["editor.action.commentLine"]
+      },
+      {
+        "before": ["<leader>","x", "x"],
+        "commands": ["editor.action.smartSelect.expand"]
+      },
+      {
+        "before": ["<leader>","z", "z"],
+        "commands": ["editor.action.smartSelect.shrink"]
+      },
+      {
+        "before": ["<leader>","t", "a"],
+        "commands": ["workbench.action.toggleActivityBarVisibility"]
+      },
+      {
+        "before": ["<leader>","t", "b"],
+        "commands": ["workbench.action.toggleSidebarVisibility"]
+      },
+      {
+        "before": ["<leader>","x", "s"],
+        "commands": ["workbench.action.files.save"]
+      },
+      {
+        "before": ["<leader>","s", "s"],
+        "commands": ["actions.find"]
+      },
+      {
+        "before": ["%"],
+        "commands": ["extension.matchitJumpItems"]
+      },
+      {
+        "before": ["<leader>","s", "i"],
+        "commands": ["extension.matchitSelectItems"]
+      },
+      {
+        "before": ["<leader>","d", "i"],
+        "commands": ["extension.matchitDeleteItems"]
+      },
+      {
+        "before": ["<leader>","x", "f"],
+        "commands": ["workbench.action.files.openFile"]
+      },
+      {
+        "before": ["<leader>", "x", "k"],
+        "commands": ["workbench.action.closeActiveEditor"]
+      },
+      {
+        "before": ["<leader>","r", "r"],
+        "commands": ["workbench.action.openRecent"]
+      },
+      {
+        "before": ["<leader>","k", "k"],
+        "commands": ["workbench.action.quickOpen"]
+      },
+      {
+        "before": ["<leader>","i", "i"],
+        "commands": ["workbench.action.gotoSymbol"]
+      },
+      {
+        "before": ["<leader>","x", "1"],
+        "commands": ["workbench.action.editorLayoutSingle"]
+      },
+      {
+        "before": ["<leader>","x", "3"],
+        "commands": ["workbench.action.splitEditorRight"]
+      },
+      {
+        "before": ["<leader>","x", "2"],
+        "commands": ["workbench.action.splitEditorDown"]
+      },
+      {
+        "before": ["<leader>","x", "4"],
+        "commands": ["workbench.action.editorLayoutTwoByTwoGrid"]
+      },
+      {
+        "before": ["<leader>","x", "0"],
+        "commands": ["workbench.action.closeGroup"]
+     },
+      {
+        "before": ["<leader>","x", "z"],
+        "commands": ["workbench.action.terminal.focus"]
+      },
+      {
+        "before": ["<leader>","f", "z"],
+        "commands": ["workbench.action.toggleZenMode"]
+      },
+      {
+        "before": ["<leader>","w", "h"],
+        "after": ["<C-w>", "h"]
+      },
+      {
+        "before": ["<leader>","w", "j"],
+        "after": ["<C-w>", "j"]
+      },
+      {
+        "before": ["<leader>","w", "k"],
+        "after": ["<C-w>", "k"]
+      },
+      {
+        "before": ["<leader>","w", "l"],
+        "after": ["<C-w>", "l"]
+      },
+      {
+        "before": ["<leader>","w", "q"],
+        "after": [":wq"],
+      }
 	],
 	"vim.visualModeKeyBindings": [
 		{ // which key
@@ -690,7 +857,21 @@
 	// "workbench.panel.defaultLocation": "bottom",
 	// "workbench.panel.opensMaximized": "always",
 	"workbench.startupEditor": "newUntitledFile",
-	"editor.inlayHints.enabled": "off"
+	"editor.inlayHints.enabled": "off",
+	"editor.defaultFormatter": "xaver.clang-format",
+	"clang-format.language.typescript.style": "Style",
+	"C_Cpp.clang_format_style": "file",
+	"clang-format.language.cpp.style": "file",
+	"clang-format.language.c.style": "file",
+	// "clang-format.assumeFilename": "C:\\Users\\wangwenqiang01\\.vscode\\extensions\\xaver.clang-format-1.9.0\\.clang-format",
+	"clang-format.assumeFilename": "/home/kingwq/.config/.clang-format",
+	"clang-format.style": "Google",
+	"clang-format.fallbackStyle": "LLVM",
+	// "clang-format.language.cpp.fallbackStyle": "C:\\Users\\wangwenqiang01\\.vscode\\extensions\\xaver.clang-format-1.9.0\\.clang-format",
+	// "clang-format.language.c.fallbackStyle": "C:\\Users\\wangwenqiang01\\.vscode\\extensions\\xaver.clang-format-1.9.0\\.clang-format",
+	// "clang-format.fallbackStyle": "GNU"
+	// "clang-format.language.cpp.style": "C:\\Users\\wangwenqiang01\\.vscode\\extensions\\xaver.clang-format-1.9.0\\.clang-format",
+	// "clang-format.language.c.style": "C:\\Users\\wangwenqiang01\\.vscode\\extensions\\xaver.clang-format-1.9.0\\.clang-format",
 	// "window.zoomLevel": -1,
 	// "workbench.colorTheme": "Catppuccin",
 	// "workbench.iconTheme": "vscode-icons",
