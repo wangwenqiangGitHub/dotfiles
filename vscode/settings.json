@@ -875,4 +875,6 @@
 	// "window.zoomLevel": -1,
 	// "workbench.colorTheme": "Catppuccin",
 	// "workbench.iconTheme": "vscode-icons",
+
+	// clang-format需要在vscode中右键 format-document-which 配置默认格式化为clang-format
 }
