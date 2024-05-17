@@ -93,7 +93,7 @@
 		"command": "workbench.action.splitEditorUp"
 	},
 	{
-		"key": "ctrl+,",
+		"key": "ctrl+j",
 		"command": "workbench.action.terminal.toggleTerminal",
 		"when": "terminal.active"
 	},
@@ -211,5 +211,9 @@
 	{
 		"key": "crtl+j",
 		"command": "outline.focus"
+	},
+	{
+		"key": "escape",
+		"command": "multiCommand.multiEscape"
 	}
 ]

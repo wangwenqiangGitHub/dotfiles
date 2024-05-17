@@ -24,7 +24,7 @@
 	},
 	// 参考
 	"[c]": {
-		"editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+		"editor.defaultFormatter": "xaver.clang-format"
 	},
 	"[cpp]": {
 		"editor.defaultFormatter": "xaver.clang-format"
@@ -145,7 +145,7 @@
 	"testMate.cpp.log.logSentry": "enable",
 	/* vim settings start */
 	"vim.camelCaseMotion.enable": true,
-	// "vim.easymotion": true,
+	"vim.easymotion": true,
 	"vim.foldfix": true, // to avoid fold open up autocamatically
 	"vim.sneak": false,
 	"vim.surround": true,
@@ -205,7 +205,16 @@
             "commands": [
                 "workbench.action.switchWindow"
             ]
-        },
+		},
+		{
+			"before": [
+                "<leader>",
+				"m"
+			],
+			"commands": [
+				"editor.action.jumpToBracket"
+			]
+		},
        // {
        //     "before": [
        //         "<leader>",
@@ -302,7 +311,7 @@
 		},
 		   // 切换最左侧图标面板可见性
     {
-      "before": ["<leader>", "s", "a"],
+      "before": ["<leader>", "a", "a"],
       "commands": ["workbench.action.toggleActivityBarVisibility"]
     },
     // 打开文件浏览器
@@ -386,16 +395,26 @@
         "commands": ["workbench.action.findInFiles"]
       },
       {
-        "before": ["<leader>","s", "s"],
+        "before": ["<leader>","n", "n"],
         "commands": ["actions.find"]
       },
 	  {
-		"before": ["<leader>", "a", "a"],
-		// "command": "C_Cpp.SwitchHeaderSource"
-		"command": ["clangd.switchheadersource"]
+		// "before": ["<leader>", "a", "a"],
+		// // "command": "C_Cpp.SwitchHeaderSource"
+		// "command": ["clangd.switchheadersource"]
 	  }
 	],
 	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"s"
+			],
+			"after": [
+				"<leader>",
+				"leader",
+				"s"
+			]
+		},
 		{
 			"before": [
 				"<leader>",
@@ -613,7 +632,7 @@
         "commands": ["workbench.action.files.save"]
       },
       {
-        "before": ["<leader>","s", "s"],
+        "before": ["<leader>","k", "k"],
         "commands": ["actions.find"]
       },
       {
@@ -621,7 +640,7 @@
         "commands": ["extension.matchitJumpItems"]
       },
       {
-        "before": ["<leader>","s", "i"],
+        "before": ["<leader>","b", "b"],
         "commands": ["extension.matchitSelectItems"]
       },
       {
@@ -695,7 +714,10 @@
       {
         "before": ["<leader>","w", "q"],
         "after": [":wq"],
-      }
+      },
+	  {
+		
+	  }
 	],
 	"vim.visualModeKeyBindings": [
 		{ // which key
@@ -865,7 +887,7 @@
 	"clang-format.language.c.style": "file",
 	// "clang-format.assumeFilename": "C:\\Users\\wangwenqiang01\\.vscode\\extensions\\xaver.clang-format-1.9.0\\.clang-format",
 	"clang-format.assumeFilename": "/home/kingwq/.config/.clang-format",
-	"clang-format.style": "Google",
+	// "clang-format.style": "Google",
 	"clang-format.fallbackStyle": "LLVM",
 	// "clang-format.language.cpp.fallbackStyle": "C:\\Users\\wangwenqiang01\\.vscode\\extensions\\xaver.clang-format-1.9.0\\.clang-format",
 	// "clang-format.language.c.fallbackStyle": "C:\\Users\\wangwenqiang01\\.vscode\\extensions\\xaver.clang-format-1.9.0\\.clang-format",
@@ -875,6 +897,24 @@
 	// "window.zoomLevel": -1,
 	// "workbench.colorTheme": "Catppuccin",
 	// "workbench.iconTheme": "vscode-icons",
-
-	// clang-format需要在vscode中右键 format-document-which 配置默认格式化为clang-format
+	// multi-command插件
+	"multiCommand.commands": [
+		{
+			"command": "multiCommand.multiEscape",
+			"sequence": [
+				// 聚焦到第一组编辑器上
+				"workbench.action.focusFirstEditorGroup",
+				// 同时触发 vim 的 esc 效果，避免一些bug 发生
+				"extension.vim_escape",
+				// 可选：关闭搜索栏图标
+				"closeFindWidget",
+				// 可选：关闭智能提示栏，有些时候会用到。
+				"hideSuggestWidget",
+				// 可选：关闭编辑器的提示，有时候 vscode 会报错，然后右下角弹窗口出来
+				//      设定这个以后就可以用这个指令关闭了。
+				"notifications.clearAll"
+			]
+		}
+	],
+	"editor.bracketPairColorization.enabled": false
 }
