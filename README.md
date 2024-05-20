@@ -404,6 +404,11 @@ git commit --amend -no-edit
 - muti-command
 - whichkey
 - vim
+- doxygen documentation generator
+- clangd
+- clang-format
+- plantUML
+- bookmarks
 
 | 快捷键       | 说明             |
 |--------------|------------------|
