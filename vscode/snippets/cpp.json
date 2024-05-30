@@ -15,23 +15,23 @@
 	"cpp file header": {
 		"prefix": "head",
 		"body": [
-		  "/*********************************************************************************",
-		  "* @file        test.cpp",
-		  "* @brief       $1",
-		  "* @details     $2",
-		  "* @author      wwq",
-		  "* @date        $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
-		  "* @copyright   Copyright (c) $CURRENT_YEAR CICTCI V2X Division.",
-		  "* @verbatim",
-		  "*",
-		  "*  Change History:",
-		  "*  Date          Author       Version       Description",
-		  "*  ------------------------------------------------------------------------------",
-		  "*   $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE     wwq         1.0           Create this file",
-		  "*",
-		  "* @endverbatim",
-		  "********************************************************************************/",
-		  "$3"
+			"/*********************************************************************************",
+			"* @file        test.cpp",
+			"* @brief       $1",
+			"* @details     $2",
+			"* @author      wwq",
+			"* @date        $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+			"* @copyright   Copyright (c) $CURRENT_YEAR CICTCI V2X Division.",
+			"* @verbatim",
+			"*",
+			"*  Change History:",
+			"*  Date          Author       Version       Description",
+			"*  ------------------------------------------------------------------------------",
+			"*   $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE     wwq         1.0           Create this file",
+			"*",
+			"* @endverbatim",
+			"********************************************************************************/",
+			"$3"
 		],
 		"description": "cpp file header"
 	},
@@ -46,8 +46,8 @@
 		"prefix": "#inc<",
 		"body": [
 			"#include <$1>"
-							],
-							"description": "Code snippet for #include \" \""
+		],
+		"description": "Code snippet for #include \" \""
 	},
 	"union": {
 		"prefix": "union",
@@ -68,14 +68,15 @@
 				"}"
 		],
 		"description": "Code snippet for range-based for loop (c++11) statement"
-	},"#ifdef": {
-	"prefix": "#ifdef",
-	"body": [
-		"#ifdef ${DEBUG}",
-		"$1",
-		"#endif // ${DEBUG}"
-	],
-	"description": "Code snippet for #ifdef"
+	},
+	"#ifdef": {
+		"prefix": "#ifdef",
+		"body": [
+			"#ifdef ${DEBUG}",
+			"$1",
+			"#endif // ${DEBUG}"
+		],
+		"description": "Code snippet for #ifdef"
 	},
 	"#ifndef": {
 		"prefix": "#ifndef",
@@ -86,5 +87,12 @@
 			"#endif // !$1"
 		],
 		"description": "Code snippet for #ifndef"
+	},
+	"pr": {
+		"prefix": "pr",
+		"body": [
+			"printf("<%s %d>\n",__func__, __LINE__);"
+		],
+		"description": "printf line"
 	}
 }
