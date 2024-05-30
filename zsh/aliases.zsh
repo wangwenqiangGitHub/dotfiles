@@ -44,6 +44,7 @@ alias gpm='git push origin main'
 alias ge='git commit --allow-empty-message --allow-empty -m ""'
 alias gla='gl --author wangwenqiang'
 alias glf='gl --follow -p'
+alias gd='git diff | vim -R -'  # git查看gbk编码乱码问题用vim查看
 # alias ga="git add -A"
 # 与go命令冲突
 # alias go="git checkout"
