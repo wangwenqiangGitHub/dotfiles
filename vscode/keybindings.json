@@ -214,6 +214,20 @@
 	},
 	{
 		"key": "escape",
-		"command": "multiCommand.multiEscape"
-	}
+		"command": "multiCommand.multiEscape",
+	},
+	{
+		"key": "ctrl+shift+a",
+		"command": "search.action.openNewEditor"
+	},
+	// {
+	// 	"key": "tab o",
+	// 	"command": "clangd.switchheadersource",
+	// 	"when": "editorTextFocus"
+	// },
+	{
+		"key": "alt+o",
+		"command": "-clangd.switchheadersource",
+		"when": "editorTextFocus"
+	},
 ]

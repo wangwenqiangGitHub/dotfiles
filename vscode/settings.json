@@ -14,7 +14,6 @@
 		},
 	],
 	"vim.leader": " ",
-	"editor.formatOnSave": true,
 	"workbench.colorTheme": "Monokai Pro (Filter Machine)",
 	"workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
 	"editor.quickSuggestions": {
@@ -64,8 +63,10 @@
 		// 输入建议中，已包含头文件的项与还未包含头文件的项会以圆点加以区分
 		"--header-insertion-decorators",
 		"-j=12",
-		"--pretty"
+		"--pretty",
 		// 建议排序模型
+		// 关闭头文件自动插入，主要由于vxworks中编译会出错，不好排查问题
+		"--header-insertion=never"
 	],
 	"debug.console.fontSize": 16,
 	"diffEditor.maxComputationTime": 0,
@@ -398,7 +399,13 @@
         "before": ["<leader>","n", "n"],
         "commands": ["actions.find"]
       },
-	  {
+	  
+		{
+//   "key": "ctrl+alt+k",
+        "before": ["<leader>","b", "a"],
+  "command": "bookmarks.toggle",
+  "when": "editorTextFocus"
+  
 		// "before": ["<leader>", "a", "a"],
 		// // "command": "C_Cpp.SwitchHeaderSource"
 		// "command": ["clangd.switchheadersource"]
@@ -714,11 +721,64 @@
       {
         "before": ["<leader>","w", "q"],
         "after": [":wq"],
-      },
-	  {
-		
-	  }
-	],
+	},
+	{
+		"before": [
+			"<leader>",
+			"w",
+			"v"
+		],
+		"command": "outline.followCursor"
+	},
+	{
+		"before": [
+			"m",
+			"a"
+		],
+		"commands": [
+			{
+				"command": "bookmarks.toggle",
+			}
+		]
+	}
+	,
+	{
+		"before": [
+			"<leader>",
+			"f",
+			"o"
+		],
+		"commands": [
+			{
+				"command": "outline.followCursor"
+			}
+		]
+	},
+	{
+		"before": [
+			"<leader>",
+			"o",
+			"o"
+		],
+		"commands": [
+			{
+				"command": "outline.focus"
+			}
+		]
+	},
+	{
+		"before": [
+			"<leader>",
+			"s",
+			"g"
+		],
+		"commands": [
+			{
+				"command": "workbench.action.splitEditorLeft"
+			}
+		]
+	}
+],
 	"vim.visualModeKeyBindings": [
 		{ // which key
 			"before": [
@@ -898,6 +958,7 @@
 	// "workbench.colorTheme": "Catppuccin",
 	// "workbench.iconTheme": "vscode-icons",
 	// multi-command插件
+	"editor.formatOnSave": false,
 	"multiCommand.commands": [
 		{
 			"command": "multiCommand.multiEscape",
@@ -912,9 +973,10 @@
 				"hideSuggestWidget",
 				// 可选：关闭编辑器的提示，有时候 vscode 会报错，然后右下角弹窗口出来
 				//      设定这个以后就可以用这个指令关闭了。
-				"notifications.clearAll"
+				"notifications.clearAll",
 			]
-		}
+		},
 	],
-	"editor.bracketPairColorization.enabled": false
+	"editor.bracketPairColorization.enabled": false,
+	"editor.guides.bracketPairs": true,
 }
