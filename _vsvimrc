@@ -9,7 +9,7 @@ nnoremap zp gT
 
 inoremap jj <Esc>
 
-set surround
+" set surround
 set nu
 set relativenumber
 " 高亮搜索
@@ -17,7 +17,7 @@ set hlsearch
 " 自动定位到输入中的字符串，不需要回车搜索
 set incsearch
 " 显示当前的模式
-set showmode
+" set showmode
 " 共享系统粘贴板
 set clipboard=unnamed
 " 搜索时智能匹配大小写
@@ -40,24 +40,143 @@ vmap <Leader><Leader> <Esc>
 "打开查看类的对话框
 :nnoremap <Leader>fc :vsc VAssistX.FindSymbolDialog<CR>
 "打开查看文件的对话框
-:nnoremap <Leader>ff :vsc VAssistX.OpenFileInSolutionDialog<CR>
+nnoremap <Leader>ff :vsc VAssistX.OpenFileInSolutionDialog<CR>
 "打开解决方案资源管理器
 :nnoremap <Leader>fp :vsc View.SolutionExplorer<CR>
 "打开va的在本文件中查找结果
 ":vmap <Leader>fw :vsc VAssistX.FindReferencesResults<CR>
+":nnoremap<Leader>fw :vsc VAssistX.FindReferencesResults<CR>
 :vmap <Leader>fw :vsc Edit.FindinFiles<CR>
+:nnoremap <Leader>fw :vsc Edit.FindinFiles<CR>
 "参考https://www.cxyzjd.com/article/yanchezuo/78790961
 "编译
 :nnoremap <Leader>fd :vsc Build.Compile<CR>
- ":nnoremap gb :vsc Build.BuildSolution   "build the solution" 
-:nnoremap <Leader>fe :vsc Debug.StopDebugging<CR>   "結束調試"
-:nnoremap <Leader>fr :vsc Debug.Start<CR>         "開始調試"
+":nnoremap 11 :vsc Build.Compile<CR>
+:nnoremap 11 :vsc Build.BuildSolution <cr>
+:nnoremap <Leader>dq :vsc Debug.StopDebugging<CR>   "結束調試"
+":nnoremap <Leader>fr :vsc Debug.Start<CR>         "開始調試"
+:nnoremap 55 :vsc Debug.Start<CR>         "開始調試"
+:nnoremap -- :vsc Debug.StepInto<CR>         ""
+:nnoremap 00 :vsc Debug.StepOver<CR>         ""
+:nnoremap 99 :vsc Debug.StepOut<CR>         ""
+:nnoremap <Leader>db :vsc Debug.ToggleBreakpoint<CR>   "断点"
+:nnoremap <Leader>dc :vsc Debug.Continue<CR>   "继续调试"
+
 :nnoremap <Leader>ft :vsc VAssistX.RefactorRename<CR>     " 重命名"
 :nnoremap <Leader>fn :vsc VAssistX.RefactorCreateFile<CR> " 创建文件"
+
  " 窗口管理
 :nnoremap <Leader>sl :set splitright<CR>:vsplit<CR>
 :nnoremap <Leader>sh :set nosplitright<CR>:vsplit<CR>
 :nnoremap <Leader>su :set nosplitbelow<CR>:split<CR>
 :nnoremap <leader>se :set splitbelow<CR>:split<CR>
 :nnoremap <leader>fv :e C:\Users\wangwenqiang01\_vsvimrc<CR>
-:nnoremap <leader>fs :so C:\Users\wangwenqiang01\_vsvimrc<CR>
+:nnoremap <leader>fs :source C:\Users\wangwenqiang01\_vsvimrc<CR>
+
+nnoremap <space>e :vsc View.SolutionExplorer<cr>
+nnoremap <space>fq :vsc Window.QuickLaunch<cr>
+" highlight active file in Solution Explorer (VS 2012+)
+nnoremap ^ :vsc SolutionExplorer.SyncWithActiveDocument<cr>
+
+nnoremap sz :vsc FullScreen<cr>
+nnoremap sv :vsc Window.Split<cr>
+
+nnoremap d<tab> :vsc Window.CloseDocumentWindow<cr>
+nnoremap gwC :vsc Window.CloseDocumentWindow<cr>
+nnoremap H :vsc Window.PreviousTab<cr>
+nnoremap L :vsc Window.NextTab<cr>
+nnoremap gwS :vsc Window.NewHorizontalTabGroup<cr>
+nnoremap gwv :vsc Window.NewVerticalTabGroup<cr>
+nnoremap gwT :vsc Window.Float<cr>
+nnoremap gwj :vsc Window.NextSplitPane<cr>
+nnoremap gwk :vsc Window.PreviousSplitPane<cr>
+
+map gi :vsc Edit.GoToImplementation<CR>
+map gr :vsc Edit.FindAllReferences<CR>
+map gp :vsc Edit.PeekDefinition<CR>
+
+nnoremap <C-r> :vsc Redo<CR>
+
+" jump between compilation errors
+nnoremap ]e :vsc View.NextError<cr>
+nnoremap [e :vsc View.PreviousError<cr>
+
+" evaluate F#
+xnoremap <enter>  :vsc EditorContextMenus.CodeWindow.ExecuteInInteractive<cr>
+nnoremap yxx      ggVG:vsc EditorContextMenus.CodeWindow.ExecuteInInteractive<cr>
+nnoremap <enter>  :vsc EditorContextMenus.CodeWindow.ExecuteLineInInteractive<cr>
+
+nnoremap ]q :vsc Edit.GoToNextLocation<cr>
+nnoremap [q :vsc Edit.GoToPrevLocation<cr>
+nnoremap ]l  :vsc Edit.NextHighlightedReference<cr>
+nnoremap [l  :vsc Edit.PreviousHighlightedReference<cr>
+" toggle 'Track Active Item in Solution Explorer' option
+nnoremap cos :vsc View.TrackActivityinSolutionExplorer<cr>
+nnoremap <space>e :vsc View.SolutionExplorer<cr>
+
+""vnoremap gcc :vsc Edit.ToggleComment<CR>
+""nnoremap gcc :vsc Edit.ToggleComment<CR>
+" for test
+"nnoremap <leader>ff :echo 'Hello'<CR>
+
+noremap <S-K> :vsc Edit.QuickInfo<cr>
+nnoremap <SPACE>laa :vsc EditorContextMenus.CodeWindow.QuickActionsForPosition<cr>
+nnoremap <SPACE>lr :vsc Refactor.Rename<cr>
+" nnoremap gr :vsc View.ShowReferences<cr>
+
+" Show windows
+" ------------
+map <Leader>wa :vsc Debug.Autos<CR>
+map <Leader>wm :vsc View.BookmarkWindow<CR>
+"map <Leader>wc :vsc View.CommandWindow<CR>
+map <Leader>wc :vsc Debug.CallStack<CR>
+map <Leader>wd :vsc Team.Git.CompareWithUnmodified<CR>
+map <Leader>we :vsc Debug.ExceptionSettings<CR>
+"map <Leader>wf :vsc View.FindResults1<CR>
+map sf :vsc View.FindResults1<CR>
+map <Leader>wF :vsc View.FullScreen<CR>
+map <Leader>WF :vsc View.FullScreen<CR>
+map <Leader>wg :vsc Team.Git.GoToGitChanges<CR>
+map <Leader>wp :vsc Team.Git.CompareWithPrevious<CR>
+map <Leader>wh :vsc Team.Git.ViewHistory<CR>
+"map <Leader>wh :vsc Window.AutoHideAll<CR>
+"map <Leader>wH :vsc Window.NextToolWindow<CR>
+map <Leader>wi :vsc Debug.Immediate<CR>
+map <Leader>wk :vsc Tools.CustomizeKeyboard<CR>
+map <Leader>wl :vsc Debug.Locals<CR>
+" map <Leader>wm :vsc Debug.Modules<CR>
+map <Leader>wo :vsc View.Output<CR>
+map <Leader>wb :vsc Debug.Breakpoints<CR>
+map <Leader>wr :vsc View.FindSymbolResults<CR>
+map <Leader>ws :vsc View.SolutionExplorer<CR> :vsc SolutionExplorer.SyncWithActiveDocument<CR>
+"map <Leader>s :vsc View.SolutionExplorer<CR> :vsc SolutionExplorer.SyncWithActiveDocument<CR>
+map <Leader>wt :vsc TestExplorer.ShowTestExplorer<CR>
+map <Leader>wv :vsc VsVim.Options<CR>
+map <Leader>ww :vsc Window.Windows<CR>
+
+" open folder
+nnoremap <leader>ex :vsc File.OpenContainingFolder<cr>
+
+xnoremap gc :vsc Edit.CommentSelection<cr>
+nnoremap gcc V:vsc Edit.CommentSelection<cr>
+nnoremap K :vsc Edit.QuickInfo<CR>
+nnoremap gD :vsc Edit.GoToDeclaration<CR>
+"nnoremap gd :vsc Edit.GoToDefinition<CR>
+"nnoremap <C-]> :vsc Edit.GoToDefinition<CR>
+nnoremap gI :vsc Edit.GoToImplementation<CR>
+nnoremap gr :vsc Edit.FindAllReferences<CR>
+
+nnoremap cr :vsc Refactor.Rename<CR>
+nnoremap ca :vsc EditorContextMenus.CodeWindow.QuickActionsForPosition<CR>
+
+nnoremap <leader>fm :vsc Edit.FormatDocument<CR>
+
+nnoremap <leader>ff :vsc Edit.GoToFile<CR>
+nnoremap <leader>fw :vsc Edit.FindInFiles<CR>
+nnoremap <leader>fo :vsc Edit.GoToRecentFile<CR>
+" nnoremap <leader><leader> :vsc Window.NextDocumentWindow<CR>
+" noremap <leader>fs :vsc Edit.GoToSymbol<CR>
+
+nnoremap [d :vsc View.PreviousError<CR>
+nnoremap ]d :vsc View.NextError<CR>
+
