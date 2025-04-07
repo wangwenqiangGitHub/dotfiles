@@ -42,6 +42,12 @@ sudo apt install ripgrep
 sudo apt install g++ gcc cmake make #clangd
 # gcc build flash -m32
 sudo apt-get install gcc-multilib g++-multilib
+sudo apt-get install libsmbclient
+sudo apt install clang-tidy
+sudo apt install arp-scan
+sudo apt install wireshark
+sudo apt install termshark
+
 # clangd手动安装地址
 #https://github.com/clangd/clangd/releases/tag/17.0.3
 
@@ -58,7 +64,11 @@ sudo apt install bear
 sudo apt install libbz2-dev p7zip-full rar
 sudo apt install universal-ctags
 sudo apt install lua5.4
+sudo apt-get install lua-filesystem
 sudo apt install sshpass
+sudo apt install git
+sudo apt install git-svn
+sudo apt install subversion
 
 ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/vimrc ~/.vimrc
