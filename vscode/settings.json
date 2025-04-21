@@ -414,6 +414,18 @@
 	"vim.normalModeKeyBindingsNonRecursive": [
 		{
 			"before": [
+				"<leader>",
+				"p",
+				"p"
+			],
+			"after": [
+				"\"",
+				"0",
+				"p"
+			]
+		},
+		{
+			"before": [
 				"s"
 			],
 			"after": [
