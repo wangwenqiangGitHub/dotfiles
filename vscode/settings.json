@@ -415,6 +415,17 @@
 		{
 			"before": [
 				"<leader>",
+				"e",
+				"x"
+			],
+			"commands": [
+				"revealFileInOS",
+				"remote-wsl.revealInExplorer"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
 				"p",
 				"p"
 			],
