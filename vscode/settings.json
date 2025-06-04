@@ -152,8 +152,8 @@
 	"vim.surround": true,
 	"vim.useCtrlKeys": false,
 	"vim.useSystemClipboard": true,
-	"vim.vimrc.enable": true,
-	"vim.vimrc.path": "c:\\Users\\wangwenqiang01\\.vsvimrc",
+	//"vim.vimrc.enable": true,
+	//"vim.vimrc.path": "c:\\Users\\wangwenqiang01\\.vsvimrc",
 	"vim.handleKeys": {
 		"<C-a>": false,
 		"<C-f>": false,
