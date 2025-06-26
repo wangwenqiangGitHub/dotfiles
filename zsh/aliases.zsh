@@ -216,3 +216,37 @@ alias sy='source ~/.zshrc'
 # [wsl]
 alias onc='control.exe /name Microsoft.NetworkAndSharingCenter'
 # devmgmt.msc
+# ftp
+alias sf-ftp='lftp -u target,12345678 192.168.1.100'
+
+alias findCFiles='find ./ -iname "*.c" -o -iname "*.cpp" -o -iname "*.h" -o -iname "*.hpp"'
+alias showU='find ./ -iname "*.c" -o -iname "*.cpp" -o -iname "*.h" -o -iname "*.hpp" | xargs file'
+alias cap="sshpass -p '12345678' ssh root@192.168.1.100 'tcpdump -s 0 -U -i any -e -w - not port 22' |  wireshark.exe -i - -k"
+
+alias pack="tar \
+	--exclude='**/.cache' \
+	--exclude='**/build' \
+	--exclude='**/VS*' \
+	--exclude='**/*.zip' \
+	--exclude='**/*.tar' \
+	--exclude='**/*.tar.gz' \
+	--exclude='**/back' \
+	--exclude='**/cmake_debug' \
+	--exclude='**/cmake_workspace/*' \
+	-zcvf \
+	pack_code__$(date +%Y-%m-%d_%H%M).tar.gz \
+	build/ \
+	code/ code/Distribution code/platformApp code/ "
+
+alias tscp='termscp'
+alias s1="sshpass -p '12345678' ssh -o ProxyCommand='sshpass -p '12345678' ssh -W %h:%p root@192.1168.100.100' root@192.168.1.101"
+function s1d(){
+	sshpass -p '12345678' scp -o ProxyCommand="sshpass -p '12345678' ssh -W %h:%p root@192.168.1.100" root@192.168.1.101:${1} .
+}
+
+function s1b(){
+	sshpass -p '12345678' scp -o ProxyCommand="sshpass -p '12345678' ssh -W %h:%p root@192.168.1.100" ${1} root@192.168.1.101:/mnt/sdisk1/bin
+}
+
+alias cm="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=on -DCMAKE_INSTALL_PREFIX=\`pwd\`/OUT -DCMAKE_BUILD_TYPE=Release .."
+alias fs="du -h  | sort -hr"
